@@ -1,0 +1,25 @@
+		<div class="workflow">
+
+			<div class="center">
+
+				<p class="workflow__before before">
+					{{ translate.WORKFLOW_BEFORE[lang] }}
+				</p>
+
+				<h2 class="workflow__title h1">
+					{{ translate.WORKFLOW_TITLE[lang] }}
+				</h2>
+
+				<ol class="workflow__list">
+
+{% for li in translate.WORKFLOW_LIST[lang] %}
+
+					<li>{{ li }}</li>
+
+{% endfor %}
+
+				</ol>
+
+			</div>
+
+		</div>

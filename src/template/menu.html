@@ -1,0 +1,29 @@
+				<nav class="menu">
+
+					<button class="menu__btn btn btn--dark" type="button" aria-label="{{ translate.OPEN_MENU[lang] }}">
+
+						<span class="btn__inner">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<path class="menu__open-visible" d="M3 4h18v2H3V4Zm0 7h18v2H3v-2Zm0 7h18v2H3v-2Z"/>
+								<path class="menu__open-hidden" d="m12 10.59 4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41L12 10.59Z"/>
+							</svg>
+						</span>
+
+					</button>
+
+					<div class="border menu__list">
+
+						<ul class="border__inner">
+
+{% for link in ["/","/","/","/"] -%}
+
+							<li>
+								<a href="{{ subdomain }}{{ link }}">{{ translate.MENU[lang][loop.index0] }}</a>
+							</li>
+
+{%- endfor %}
+						</ul>
+
+					</div>
+
+				</nav>

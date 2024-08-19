@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" prefix="og: https://ogp.me/ns#">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>{{ title }}</title>
+{#
+	<link href="https://mc.yandex.ru/metrika/tag.js" rel="preload" as="script">
+	<link href="https://sc.lfeeder.com" rel="preconnect">
+	<link href="https://www.googletagmanager.com" rel="preconnect">
+#}
+
+
+	<link href="/css/styles.css" rel="preload" as="style">
+	<link href="/js/scripts.js" rel="preload" as="script">
+
+	<link href="/fonts/roboto-v30-latin-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+	<link href="/fonts/montserrat-v26-cyrillic_latin-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+	<link href="/fonts/montserrat-v26-cyrillic_latin-600.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+
+	<link href="{{ url }}/favicon.svg" rel="icon" type="image/svg+xml">
+	<link href="{{ url }}/favicon.png" rel="apple-touch-icon">
+
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ description | default(site) }}">
+	<meta name="theme-color" content="#191818">
+	<meta property="og:site_name" content="{{ site }}">
+	<meta property="og:url" content="{{ url }}{{ subdomain }}{% if folder %}/{{ folder }}{% endif %}">
+	<meta property="og:type" content="{{ ogType | default('website') }}">
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:description" content="{{ description | default(site) }}">
+
+	<meta property="og:image" content="{{ url }}/og.png">
+	<meta property="og:image:secure_url" content="{{ url }}/og.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image" content="{{ url }}/og-256.png">
+	<meta property="og:image:width" content="256">
+	<meta property="og:image:height" content="256">
+
+	<meta property="og:locale" content="{{ lang }}">
+{% for _lang in langs -%}
+{% if _lang !== lang %}
+	<link rel="alternate" hreflang="{{ _lang }}" href="/{% if _lang !== 'en' %}{{ _lang }}/{% endif %}{% if folder %}{{ folder }}/{% endif %}">
+{% endif %}
+{%- endfor %}
+
+	<link href="/css/styles.css" rel="stylesheet">
+
+	<script defer src="/js/scripts.js"></script>
+
+{% if build %}
+
+
+{% endif %}
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+{% include "template/header.html" %}
+
+	<main class="main">
+
+{% block content %}{% endblock %}
+
+	</main>
+
+{% include "template/footer.html" %}
+
+</div>
+
+</body>
+</html>

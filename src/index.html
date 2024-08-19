@@ -1,0 +1,42 @@
+{% set title = translate.TITLE_HOME[lang] %}
+
+{% set description = translate.DESCRIPTION_HOME[lang] %}
+
+{% set preloadImage = [
+	{
+		media : "(min-width: 1200px)",
+		img   : "/img/first-screen/front.webp",
+		imagesrcset : "/img/first-screen/front.webp 1x, /img/first-screen/front@2x.webp 2x"
+	},
+	{
+		media : "(min-width: 1200px)",
+		img   : "/img/first-screen/back.webp",
+		imagesrcset : "/img/first-screen/back.webp 1x, /img/first-screen/back@2x.webp 2x"
+	},
+	{
+		media : "(min-width: 728px) and (max-width: 1199px)",
+		img   : "/img/first-screen/850x1000.webp",
+		imagesrcset : "/img/first-screen/850x1000.webp"
+	},
+	{
+		media : "(max-width: 727px)",
+		img   : "/img/first-screen/564x662.webp",
+		imagesrcset : "/img/first-screen/564x662.webp"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "main/first-screen.html" %}
+
+{% include "main/benefits.html" %}
+
+{% include "main/ecosystem.html" %}
+
+{% include "main/workflow.html" %}
+
+{% include "main/get-started.html" %}
+
+{% endblock %}

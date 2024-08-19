@@ -1,0 +1,239 @@
+.first-screen {
+
+	position: relative;
+
+	&__box {
+
+		/* height: var(--vh); */
+
+		@media $desktop {
+
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+
+		}
+
+	}
+
+	&__content {
+
+		max-width: 720px;
+
+		@media $mdWidth {
+
+			text-align: center;
+			margin: 64px 0;
+
+		}
+
+		@media $smWidth {
+
+			margin: 44px 0;
+
+		}
+
+	}
+
+	&__title {
+
+		margin-bottom: var(--gap);
+
+		@media $mdWidth {
+
+			margin-bottom: 16px;
+
+		}
+
+		b {
+
+			font-weight: inherit;
+			display: block;
+			color: #F63;
+
+		}
+
+	}
+
+	&__text {
+
+		margin-bottom: 64px;
+		font-size: 18px;
+		line-height: 32px;
+		max-width: 600px;
+
+		@media $mdWidth {
+
+			margin: 0 auto 48px;
+
+		}
+
+		@media $smWidth {
+
+			font-size: 14px;
+			line-height: 24px;
+			margin-bottom: 40px;
+
+		}
+
+	}
+
+	&__btn {
+
+		display: flex;
+
+		.btn {
+
+			min-width: 300px;
+			font-weight: 500;
+
+		}
+
+		@media $mdWidth {
+
+			justify-content: center;
+
+			.btn {
+
+				min-width: 350px;
+
+			}
+
+		}
+
+		@media $smWidth {
+
+			.btn {
+
+				min-width: 100%;
+
+			}
+
+		}
+
+	}
+
+	&__img {
+
+		position: relative;
+		width: 548px;
+		height: 641px;
+
+		&::before {
+
+			position: absolute;
+			width: 487px;
+			height: 397px;
+			left: 16px;
+			top: 244px;
+			content: '';
+			background-color: var(--orange);
+			filter: blur(126px);
+
+		}
+
+		@media $mdWidth {
+
+			width: auto;
+			height: 500px;
+			display: flex;
+			justify-content: center;
+			margin: 40px 0;
+
+			&::before {
+
+				width: 487px;
+				height: 268px;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+
+			}
+
+		}
+
+		@media $smWidth {
+
+			height: 331px;
+			margin: 20px 0;
+
+			&::before {
+
+				width: 322px;
+				height: 178px;
+
+			}
+
+		}
+
+		@media $xsWidth {
+
+			&::before {
+
+				width: 280px;
+
+			}
+
+		}
+
+	}
+
+	&__back {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+
+		@media $mdWidth {
+
+			display: none;
+
+		}
+
+	}
+
+	&__front {
+
+		@media $desktop {
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			box-shadow: -152px -84px 169px rgba(0, 0, 0, 0.8);
+			border-radius: 30px;
+			backdrop-filter: blur(9px);
+
+		}
+
+		@media $mdWidth {
+
+			img {
+
+				width: 425px;
+				height: 500px;
+				object-fit: contain;
+
+			}
+
+		}
+
+		@media $smWidth {
+
+			img {
+
+				width: 282px;
+				height: 331px;
+
+			}
+
+		}
+
+	}
+
+}

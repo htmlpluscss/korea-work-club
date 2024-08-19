@@ -1,0 +1,91 @@
+		<div class="benefits">
+
+			<div class="center">
+
+				<p class="benefits__before before">
+					{{ translate.BENEFITS_BEFORE[lang] }}
+				</p>
+
+				<h2 class="benefits__title h1">
+					{{ translate.BENEFITS_BEFORE[lang] }}
+				</h2>
+
+				<ul class="benefits__list">
+
+					<li class="benefits__item">
+
+						<div class="benefits__head">
+
+							<div class="benefits__ico">
+								<svg width="64" height="64" viewBox="0 0 64 64">
+									<path fill="url(#benefits-grad)" d="m33.64 5.6 17.71 6.05a4.83 4.83 0 0 1 3.32 4.54v17.7c0 5.38-2 10.57-5.62 14.63a22.62 22.62 0 0 1-6.5 4.89l-9.57 5.02a2.1 2.1 0 0 1-1.92 0l-9.6-5.03a22.72 22.72 0 0 1-6.5-4.88A21.98 21.98 0 0 1 9.33 33.9a2 2 0 0 1 2.02-1.96 2 2 0 0 1 2.02 1.96c0 4.43 1.65 8.71 4.64 12.06a18.7 18.7 0 0 0 5.37 4l8.64 4.52 8.61-4.52c2.28-1.2 4.04-2.5 5.37-4a18.1 18.1 0 0 0 4.63-12.05V16.19a.9.9 0 0 0-.61-.84L32.3 9.31a.95.95 0 0 0-.6 0l-17.72 6.04a.9.9 0 0 0-.6.84v5.07a2 2 0 0 1-2.03 1.96 2 2 0 0 1-2.02-1.96v-5.07a4.83 4.83 0 0 1 3.32-4.54l17.7-6.05a5.16 5.16 0 0 1 3.3 0ZM30.1 38.18c-.54 0-1.05-.2-1.43-.58l-5.1-4.95c-.78-.76-.78-2 0-2.77a2.06 2.06 0 0 1 2.86 0l3.67 3.56 9.06-8.8a2.06 2.06 0 0 1 2.85 0c.79.76.79 2 0 2.77l-10.49 10.2c-.38.36-.89.57-1.42.57Z"/>
+									<defs>
+										<linearGradient id="benefits-grad" x1="9.33" x2="66.91" y1="58.67" y2="34.46" gradientUnits="userSpaceOnUse">
+											<stop offset="0" stop-color="#ADA785"/>
+											<stop offset="1" stop-color="#D6D3C2"/>
+										</linearGradient>
+									</defs>
+								</svg>
+							</div>
+
+							<b class="benefits__name">
+								{{ translate.BENEFITS_LIST[lang][0].name | safe }}
+							</b>
+
+						</div>
+
+						<p class="benefits__body">
+							{{ translate.BENEFITS_LIST[lang][0].text | safe }}
+						</p>
+
+					</li>
+
+					<li class="benefits__item">
+
+						<div class="benefits__head">
+
+							<div class="benefits__ico">
+								<svg width="64" height="64" viewBox="0 0 64 64">
+									<path fill="url(#benefits-grad)" d="M43.56 5.33H20.44c-9.04 0-15.1 6.34-15.1 15.78v21.78c0 9.44 6.06 15.78 15.1 15.78a2 2 0 0 0 0-4c-6.75 0-11.1-4.62-11.1-11.78V21.11c0-7.16 4.35-11.78 11.1-11.78h23.12c6.75 0 11.1 4.62 11.1 11.78v21.78c0 7.16-4.35 11.78-11.1 11.78H29.2a2 2 0 0 0 0 4h14.35c9.03 0 15.1-6.34 15.1-15.78V21.11c0-9.44-6.06-15.78-15.1-15.78ZM32 33.5a7.83 7.83 0 0 0-7.83 7.83v1.34a1.5 1.5 0 0 1-3 0v-1.34c0-4.28 2.48-7.98 6.09-9.74a6.83 6.83 0 1 1 9.48 0c3.6 1.76 6.1 5.46 6.1 9.74v1.34a1.5 1.5 0 1 1-3 0v-1.34c0-4.32-3.51-7.83-7.84-7.83Zm0-3a3.83 3.83 0 1 0 0-7.67 3.83 3.83 0 0 0 0 7.67Z"/>
+								</svg>
+							</div>
+
+							<b class="benefits__name">
+								{{ translate.BENEFITS_LIST[lang][1].name | safe }}
+							</b>
+
+						</div>
+
+						<p class="benefits__body">
+							{{ translate.BENEFITS_LIST[lang][1].text | safe }}
+						</p>
+
+					</li>
+
+					<li class="benefits__item">
+
+						<div class="benefits__head">
+
+							<div class="benefits__ico">
+								<svg width="64" height="64" viewBox="0 0 64 64">
+									<path fill="url(#benefits-grad)" d="M20.44 5.33h23.12c9.04 0 15.1 6.34 15.1 15.78v21.78c0 9.44-6.07 15.78-15.1 15.78H29.2a2 2 0 0 1 0-4h14.35c6.75 0 11.1-4.62 11.1-11.78V21.11c0-7.16-4.35-11.78-11.1-11.78H20.44c-6.75 0-11.1 4.62-11.1 11.78v21.78c0 7.16 4.35 11.78 11.1 11.78a2 2 0 0 1 0 4c-9.04 0-15.1-6.34-15.1-15.78V21.11c0-9.44 6.06-15.78 15.1-15.78ZM35.2 34.2h-8.8v3.2h4v3.2h3.2v-3.2h1.6a4 4 0 1 0 0-8h-6.4a.8.8 0 1 1 0-1.6h8.8v-3.2h-4v-3.2h-3.2v3.2h-1.6a4 4 0 0 0 0 8h6.4a.8.8 0 0 1 0 1.6Z"/>
+								</svg>
+							</div>
+
+							<b class="benefits__name">
+								{{ translate.BENEFITS_LIST[lang][2].name | safe }}
+							</b>
+
+						</div>
+
+						<p class="benefits__body">
+							{{ translate.BENEFITS_LIST[lang][2].text | safe }}
+						</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>

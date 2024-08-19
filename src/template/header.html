@@ -1,0 +1,42 @@
+	<header class="header">
+
+		<div class="center">
+
+			<div class="header__flex">
+
+				<div class="header__logo">
+
+					<a href="{{ subdomain }}/">
+
+						<picture>
+
+							<source srcset="/img/fenilux.svg" media="(max-width: 727px)">
+							<source srcset="/img/fenilux-slogan.svg">
+
+							<img src="/img/fenilux-slogan.svg" alt="" width="305" height="32" loading="eager">
+
+						</picture>
+
+					</a>
+
+				</div>
+
+				<a href="{{ subdomain }}/sign-in/" class="header__btn btn btn--brown">
+					<span class="btn__inner">
+						{{ translate.LOGIN[lang] }}
+					</span>
+				</a>
+
+				<a href="{{ subdomain }}/sign-up/" class="header__btn btn btn--dark">
+					<span class="btn__inner">
+						{{ translate.CONTACT_SALES[lang] }}
+					</span>
+				</a>
+
+{% include "template/lang.html" %}
+
+			</div>
+
+		</div>
+
+	</header>
