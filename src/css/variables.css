@@ -4,6 +4,7 @@
 	--bg: #fff;
 	--red: #fd626e;
 	--redHover: #fc404d;
+	--brown: #806e63;
 
 	--link: #e61919;
 
@@ -17,17 +18,14 @@
 
 	--transitionDefault: 0s;
 
-	--margin: 150px;
 	--space: 80px;
 	--gap: 24px;
 	--indent: 30px;
 
-	--vh: 100vh;
-
 }
 
 $desktop: (min-width: 1200px);
-$tablet:  (min-width: 728px) and (max-width: 1199px);
+$tablet:  (min-width: 768px) and (max-width: 1199px);
 $mdWidth: (max-width: 1199px);
-$smWidth: (max-width: 727px);
-$xsWidth: (max-width: 359px);
+$smWidth: (max-width: 767px);
+$xsWidth: (max-width: 374px);

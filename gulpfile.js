@@ -45,7 +45,7 @@ const action = process.env.API;
 
 const html = (files, since = {}) => {
 
-	gulp.src(files, since)
+	return gulp.src(files, since)
 		.pipe(plumber())
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
@@ -61,13 +61,13 @@ const html = (files, since = {}) => {
 			url : 'https://validator.w3.org/nu/'
 		}))
 		.pipe(w3cjs.reporter())
-		.pipe(gulp.dest('build' + folder ));
+		.pipe(gulp.dest('build'));
 
 };
 
 const htmlBuild = () => {
 
-	gulp.src('src/**/index.html')
+	return gulp.src('src/**/index.html')
 		.pipe(nunjucksRender({
 			data: {
 				url: 'https://' + domain,

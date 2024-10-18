@@ -1,36 +1,25 @@
 .first-screen {
 
 	position: relative;
+	padding: 128px 0;
+	background-image: linear-gradient(to top right, #61e4df, #fff0e1);
+	background-size: 100% 100%;
 
 	&__box {
-
-		/* height: var(--vh); */
-
-		@media $desktop {
-
-			display: flex;
-			align-items: center;
-			flex-direction: row-reverse;
-			justify-content: space-between;
-
-		}
 
 	}
 
 	&__content {
 
-		max-width: 720px;
+		max-width: 800px;
+		position: relative;
 
 		@media $mdWidth {
 
-			text-align: center;
-			margin: 64px 0;
 
 		}
 
 		@media $smWidth {
-
-			margin: 44px 0;
 
 		}
 
@@ -38,19 +27,20 @@
 
 	&__title {
 
-		margin-bottom: var(--gap);
+		margin: 40px 0;
 
-		@media $mdWidth {
+		small {
 
-			margin-bottom: 16px;
+			display: block;
+			font-size: 52px;
+			font-weight: 700;
+			margin-top: 20px;
 
 		}
 
 		b {
 
-			font-weight: inherit;
-			display: block;
-			color: #F63;
+			font-weight: 900;
 
 		}
 
@@ -58,179 +48,55 @@
 
 	&__text {
 
-		margin-bottom: 64px;
-		font-size: 18px;
-		line-height: 32px;
-		max-width: 600px;
-
-		@media $mdWidth {
-
-			margin: 0 auto 48px;
-
-		}
-
-		@media $smWidth {
-
-			font-size: 14px;
-			line-height: 24px;
-			margin-bottom: 40px;
-
-		}
+		margin: 60px 0;
 
 	}
 
-	&__btn {
+	&__btns {
 
 		display: flex;
+		gap: 40px;
 
-		.btn {
+	}
 
-			min-width: 300px;
-			font-weight: 500;
+	&__note {
 
-		}
-
-		@media $mdWidth {
-
-			justify-content: center;
-
-			.btn {
-
-				min-width: 350px;
-
-			}
-
-		}
-
-		@media $smWidth {
-
-			.btn {
-
-				min-width: 100%;
-
-			}
-
-		}
+		font-size: 20px;
+		margin: 10px 0;
 
 	}
 
 	&__img {
 
-		position: relative;
-		width: 548px;
-		height: 641px;
-
-		&::before {
-
-			position: absolute;
-			width: 487px;
-			height: 397px;
-			left: 16px;
-			top: 244px;
-			content: '';
-			background-color: var(--red);
-			filter: blur(126px);
-
-		}
-
-		@media $mdWidth {
-
-			width: auto;
-			height: 500px;
-			display: flex;
-			justify-content: center;
-			margin: 40px 0;
-
-			&::before {
-
-				width: 487px;
-				height: 268px;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				margin: auto;
-
-			}
-
-		}
-
-		@media $smWidth {
-
-			height: 331px;
-			margin: 20px 0;
-
-			&::before {
-
-				width: 322px;
-				height: 178px;
-
-			}
-
-		}
-
-		@media $xsWidth {
-
-			&::before {
-
-				width: 280px;
-
-			}
-
-		}
-
-	}
-
-	&__back {
-
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: 50%;
+		right: 0;
 		bottom: 0;
-		display: flex;
-		align-items: center;
+		overflow: hidden;
 
-		@media $mdWidth {
-
-			display: none;
-
-		}
-
-	}
-
-	&__front {
-
-		@media $desktop {
+		img {
 
 			position: absolute;
 			top: 0;
-			right: 0;
-			box-shadow: -152px -84px 169px rgba(0, 0, 0, 0.8);
-			border-radius: 30px;
-			backdrop-filter: blur(9px);
+			left: 40px;
+			width: auto;
+			height: 100%;
 
 		}
 
-		@media $mdWidth {
+	}
 
-			img {
+	&__bg {
 
-				width: 425px;
-				height: 500px;
-				object-fit: contain;
+		position: relative;
+		height: 0;
 
-			}
+		img {
 
-		}
-
-		@media $smWidth {
-
-			img {
-
-				width: 282px;
-				height: 331px;
-
-			}
+			position: absolute;
+			top: 0;
+			left: -72px;
 
 		}
 

@@ -38,16 +38,22 @@
 
 .btn {
 
-	padding: 1px;
-	border-radius: 10px;
-	font: 600 16px/24px 'Montserrat';
-	color: var(--color);
+	border-radius: 5px;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 500;
+	background-color: var(--red);
+	padding: 16px 34px;
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	box-shadow: 0 4px 10px rgba(254, 185, 190, 0.5);
 
 	@media $desktop {
 
 		&:hover {
 
-
+			--red: var(--redHover);
 
 		}
 
@@ -55,14 +61,16 @@
 
 	&--outline {
 
-		color: #fff;
-		background-color: var(--brown);
+		color: var(--brown);
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px var(--brown);
 
 		@media $desktop {
 
 			&:hover {
 
-
+				color: #fff;
+				background-color: var(--brown);
 
 			}
 
@@ -76,7 +84,7 @@
 
 .input {
 
-	padding: 15px 19px;
+	padding: 8px 16px;
 	color: currentColor;
 
 	width: 100%;
@@ -87,10 +95,12 @@
 	filter: none;
 	-webkit-transform: translateZ(0px);
 
-	border: 0;
-	border-radius: 10px;
+	border: 1px solid var(--border);
+	border-radius: 5px;
 	background-color: var(--bg);
-	font: 500 16px/24px 'Montserrat';
+
+	font-size: 18px;
+	font-weight: 500;
 
 	&::placeholder {
 
@@ -107,6 +117,7 @@
 	&:focus {
 
 		outline: none;
+		box-shadow: 0 4px 10px rgba(254, 185, 190, 0.5);
 
 	}
 
@@ -137,15 +148,22 @@
 	&__label {
 
 		display: block;
-		font: 500 12px/24px Montserrat;
-		opacity: .6;
-		margin-bottom: 8px;
+		font-size: 16px;
+		margin-bottom: 10px;
 
 	}
 
 	&__submit {
 
 		width: 100%;
+		margin-top: 20px;
+
+		.btn {
+
+			padding: 8px;
+			font-size: 18px;
+
+		}
 
 	}
 

@@ -6,61 +6,54 @@
 
 					<div class="first-screen__img">
 
-						<div class="first-screen__back">
+						<picture>
 
-							<picture>
+							<source srcset="/img/first-screen/img.webp" type="image/webp">
+							<source srcset="/img/first-screen/img.png">
 
-								<source srcset="/img/first-screen/back.webp 1x, /img/first-screen/back@2x.webp 2x" type="image/webp">
-								<source srcset="/img/first-screen/back.png 1x, /img/first-screen/back@2x.png 2x">
+							<img src="/img/first-screen/img.png" alt="" loading="lazy" width="944" height="861">
 
-								<img src="/img/first-screen/back.png" alt="" loading="lazy" width="293" height="451">
-
-							</picture>
-
-						</div>
-
-						<div class="first-screen__front">
-
-							<picture>
-
-								<source srcset="/img/first-screen/564x662.webp" type="image/webp" media="(max-width: 727px)">
-								<source srcset="/img/first-screen/564x662.png" media="(max-width: 727px)">
-
-								<source srcset="/img/first-screen/850x1000.webp" type="image/webp" media="(max-width: 1199px)">
-								<source srcset="/img/first-screen/850x1000.png" media="(max-width: 1199px)">
-
-								<source srcset="/img/first-screen/front.webp 1x, /img/first-screen/front@2x.webp 2x" type="image/webp">
-								<source srcset="/img/first-screen/front.png 1x, /img/first-screen/front@2x.png 2x">
-
-								<img src="/img/first-screen/front.png" alt="" loading="lazy" width="340" height="641">
-
-							</picture>
-
-						</div>
+						</picture>
 
 					</div>
 
 					<div class="first-screen__content">
 
-						<h1 class="first-screen__title h0">
-							{{ translate.FIRST_SCREEN_TITLE[lang] | safe }}
+						<h1 class="first-screen__title h1">
+							<span class="text-grad">Работа в караоке-клубах в Южной Корее</span>
+							<small>Доход от <b>200 000 руб/мес</b></small>
 						</h1>
 
 						<p class="first-screen__text">
-							{{ description }}
+							Требуются <b>веселые и активные девушки</b> для работы моделями хостес в Южной Корее
 						</p>
 
-						<div class="first-screen__btn">
+						<div class="first-screen__btns">
 
-							<a href="/sign-up/" class="btn btn--brown">
-								<span class="btn__inner">
-									{{ translate.GET_STARTED[lang] }}
-								</span>
+							<button class="btn" data-modal="form" type="button">
+								Заполнить анкету
+							</button>
+
+							<a class="btn btn--outline" href="https://wa.me/+79222213786" target="_blank" rel="noopener nofollow" title="Whatsapp {{ site }}">
+								<span>Написать в</span>
+								<svg width="36" height="36" viewBox="0 0 36 36">
+									<use xlink:href="#whatsapp"/>
+								</svg>
 							</a>
 
 						</div>
 
+						<p class="first-screen__note">
+							*Предлагаем лучшие условия и одобряем 90% анкет
+						</p>
+
 					</div>
+
+				</div>
+
+				<div class="first-screen__bg">
+
+					<img src="/img/first-screen/bg.webp" alt="" loading="lazy" width="250" height="347">
 
 				</div>
 

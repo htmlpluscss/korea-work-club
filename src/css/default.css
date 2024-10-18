@@ -154,6 +154,19 @@ li {
 
 }
 
+.text-grad {
+
+	display: block;
+
+	@supports (-webkit-background-clip: text) {
+
+		background-image: var(--grad);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+	}
+
+}
 
 /*
 -----------------------------------------------------------------------------*/
