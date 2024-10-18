@@ -119,11 +119,9 @@ gulp.task('js', () => {
 
 	return gulp.src([
 
-		'src/js/min/*.js',
 		'src/js/js.js',
 		'src/js/*.js',
-		'!src/js/min/swiper.min.js',
-		'!src/js/min/inputmask.min.js'
+		'!src/js/min/swiper-bundle.min.js'
 
 	], {since: gulp.lastRun('js')})
 
@@ -184,6 +182,18 @@ gulp.task('build', gulp.series(
 	'clear',
 	gulp.parallel('copy','html:build','css','js')
 	));
+
+gulp.task('min', () => {
+
+	return gulp.src(['build/**/*.html'])
+		.pipe(replace('<link href="/css/styles.css" rel="preload" as="style">', ''))
+		.pipe(replace('<link href="/js/scripts.js" rel="preload" as="script">', ''))
+		.pipe(replace('<script defer src="/js/scripts.js"></script>', ''))
+		.pipe(replace('<link href="/css/styles.css" rel="stylesheet">', '<style>' + fs.readFileSync('build/css/styles.min.css', 'utf8') + '</style>'))
+		.pipe(replace('</body>', '<script>' + fs.readFileSync('build/js/scripts.min.js', 'utf8') + '</script></body>'))
+		.pipe(gulp.dest('build'))
+
+});
 
 gulp.task('default', gulp.series(
 	'clear',

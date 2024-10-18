@@ -1,5 +1,5 @@
-# TON Telegram Combinator
-[build](https://TON-Telegram-Combinator.io)
+# Korea Work
+[build](https://korea-work-club.online)
 
 # Устанавить зависимости
 npm install
@@ -14,4 +14,4 @@ npm run build
 **Android >= 5**
 
 ### Working hours:
-10:00
+20:00
