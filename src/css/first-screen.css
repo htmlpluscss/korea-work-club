@@ -128,7 +128,7 @@
 			left: 16px;
 			top: 244px;
 			content: '';
-			background-color: var(--orange);
+			background-color: var(--red);
 			filter: blur(126px);
 
 		}

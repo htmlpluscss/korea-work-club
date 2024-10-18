@@ -11,14 +11,14 @@
 
 					</button>
 
-					<div class="border menu__list">
+					<div class="menu__list">
 
-						<ul class="border__inner">
+						<ul class="">
 
 {% for link in ["/","/","/","/"] -%}
 
 							<li>
-								<a href="{{ subdomain }}{{ link }}">{{ translate.MENU[lang][loop.index0] }}</a>
+								<a href="{{ link }}">{{ translate.MENU[lang][loop.index0] }}</a>
 							</li>
 
 {%- endfor %}

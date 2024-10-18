@@ -4,8 +4,6 @@
 	padding: 0;
 	box-sizing: border-box;
 
-	 /* color: red !important */
-
 }
 
 html {
@@ -28,9 +26,9 @@ body {
 
 	min-width: 320px;
 	color: var(--color);
-	font-size: 16px;
-	line-height: 1.5;
-	font-family: 'Roboto', sans-serif;
+	font-size: 28px;
+	line-height: 1.4;
+	font-family: 'Montserrat', sans-serif;
 	-webkit-text-size-adjust: none;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: scrollbar;
@@ -40,8 +38,6 @@ body {
 	position: relative;
 	background-color: var(--bg);
 
-/*background-image: url(/css/1.png);*/
-background-position: top;
 }
 
 a {
@@ -73,6 +69,7 @@ svg {
 	display: block;
 	position: relative;
 	fill: currentColor;
+	flex-shrink: 0;
 	transition: var(--transitionDefault);
 
 }
@@ -84,55 +81,20 @@ li {
 
 }
 
-hr {
-
-	border: 0;
-	height: 1px;
-	background-color: var(--color);
-
-}
-
-.h0 {
-
-	font-family: Montserrat;
-	font-size: 72px;
-	font-weight: 500;
-	line-height: 88px;
-
-	@media $mdWidth {
-
-		font-size: 56px;
-		line-height: 64px;
-
-	}
-
-	@media $smWidth {
-
-		font-size: 34px;
-		line-height: 40px;
-
-	}
-
-}
-
 .h1 {
 
-	font-family: Montserrat;
-	font-size: 56px;
-	font-weight: 500;
-	line-height: 72px;
+	font-size: 60px;
+	font-weight: 900;
+	line-height: 1.2;
+	color: var(--heading);
 
 	@media $mdWidth {
 
-		font-size: 40px;
-		line-height: 64px;
 
 	}
 
 	@media $smWidth {
 
-		font-size: 28px;
-		line-height: 32px;
 
 	}
 
@@ -140,36 +102,35 @@ hr {
 
 .h2 {
 
-	font-family: Montserrat;
-	font-size: 48px;
-	font-weight: 500;
-	line-height: 56px;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 1.2;
+	color: var(--heading);
 
 	@media $mdWidth {
 
-		font-size: 40px;
 
 	}
 
 	@media $smWidth {
 
-		font-size: 24px;
 
 	}
-
 }
 
 .h3 {
 
-	font-family: Montserrat;
-	font-size: 40px;
+	font-size: 32px;
 	font-weight: 500;
-	line-height: 56px;
+	line-height: 1.2;
+
+	@media $mdWidth {
+
+
+	}
 
 	@media $smWidth {
 
-		font-size: 32px;
-		line-height: 40px;
 
 	}
 
@@ -177,58 +138,22 @@ hr {
 
 .h4 {
 
-	font-family: Montserrat;
-	font-size: 28px;
-	font-weight: 600;
-	line-height: 40px;
-
-	@media $smWidth {
-
-		font-size: 24px;
-		line-height: 32px;
-
-	}
-
-}
-
-.before {
-
-	font-family: Montserrat;
 	font-size: 24px;
 	font-weight: 500;
-	line-height: 32px;
-	margin: 10px 0;
-	opacity: .6;
+	line-height: 1.2;
 
 	@media $mdWidth {
 
-		font-size: 18px;
 
 	}
 
 	@media $smWidth {
 
-		font-size: 16px;
-		line-height: 24px;
 
 	}
 
 }
 
-.border {
-
-	padding: 1px;
-	border-radius: 10px;
-	background-image: var(--linear-gradient);
-
-	&__inner {
-
-		border-radius: 10px;
-		background-color: var(--bgBorder);
-
-	}
-
-}
 
 /*
 -----------------------------------------------------------------------------*/

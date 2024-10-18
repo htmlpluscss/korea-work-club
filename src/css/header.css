@@ -144,7 +144,7 @@
 
 			&.is-open {
 
-				--bgBorder: var(--brown);
+
 
 			}
 
@@ -184,7 +184,8 @@
 
 		&:hover .btn {
 
-			--bgBorder: var(--brown);
+
+
 
 		}
 

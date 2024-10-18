@@ -5,7 +5,6 @@
 @import url(form.css);
 @import url(header.css);
 @import url(footer.css);
-@import url(select.css);
 
 @import url(first-screen.css);
 @import url(benefits.css);
@@ -13,7 +12,6 @@
 @import url(get-started.css);
 @import url(workflow.css);
 
-@import url(page-text.css);
-@import url(form-page.css);
+@import url(modal.css);
 
 @import url(swiper-bundle.css);
