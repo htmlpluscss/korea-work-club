@@ -220,13 +220,15 @@
 
 		pointer-events: none;
 		transition-property: opacity;
+		opacity: 0;
 
-	}
+		&-active {
 
-	.swiper-fade .swiper-slide-active {
+			pointer-events: auto;
+			z-index: 1;
+			opacity: 1;
 
-		pointer-events: auto;
-		z-index: 1;
+		}
 
 	}
 

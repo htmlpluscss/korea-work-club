@@ -1,0 +1,173 @@
+.total-select {
+
+	padding: var(--space) 0;
+	position: relative;
+
+	&__bg {
+
+		position: relative;
+		height: 0;
+		pointer-events: none;
+
+		&--top img {
+
+			position: absolute;
+			top: -180px;
+			left: 36px;
+
+		}
+
+		&--bottom img {
+
+			position: absolute;
+			right: 160px;
+			top: -120px;
+
+		}
+
+	}
+
+	&__content {
+
+		position: relative;
+
+	}
+
+	&__title {
+
+		margin-bottom: var(--space);
+
+	}
+
+	&__text {
+
+		margin: var(--indent) 0;
+		max-width: 1024px;
+
+	}
+
+	&__swiper {
+
+		margin-top: var(--space);
+		position: relative;
+		max-width: 1090px;
+
+		&::before {
+
+			position: absolute;
+			top: 15px;
+			left: 60px;
+			right: 0;
+			bottom: 20px;
+			content: '';
+			border-radius: 25px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 8px 22px rgba(0,0,0,0.1);
+
+		}
+
+		.swiper-controls .swiper-pagination {
+
+			flex-direction: column;
+			top: 30px;
+			left: auto;
+			right: 20px;
+			gap: 8px;
+
+			.button {
+
+				border-radius: 6px;
+				width: 11px;
+				height: 11px;
+
+				&.is-active {
+
+					height: 32px;
+					background-color: #337AB7;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&-item {
+
+		display: flex;
+		padding: 40px 20px;
+
+		&__btn {
+
+			display: flex;
+			justify-content: flex-end;
+			margin-top: var(--margin);
+
+		}
+
+		&__head {
+
+			width: 400px;
+			height: 400px;
+			flex-shrink: 0;
+
+			transform: scale(0);
+			opacity: 0;
+
+			img {
+
+				object-fit: cover;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+				border-radius: 20px;
+
+			}
+
+			.swiper-slide-active & {
+
+				opacity: 1;
+				transition: var(--transitionDefault);
+				transform: scale(1);
+
+			}
+
+		}
+
+		&__body {
+
+			padding: 0 40px;
+
+			opacity: 0;
+			transform: translateY(25px);
+			transition: var(--transitionDefault);
+
+			.swiper-slide-active & {
+
+				opacity: 1;
+				transform: translateY(0px);
+				transition-delay: var(--transitionDefault);
+
+			}
+
+		}
+
+		&__name {
+
+
+		}
+
+		&__text {
+
+			font-size: 18px;
+			line-height: 1.4;
+
+			p {
+
+				margin: 1em 0;
+
+			}
+
+		}
+
+	}
+
+}

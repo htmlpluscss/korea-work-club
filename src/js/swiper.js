@@ -21,7 +21,7 @@
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
 			  event = swipe.classList.contains('swiper--event'),
-			  investments = swipe.classList.contains('swiper--investments'),
+			  totalSelect = swipe.classList.contains('swiper--total-select'),
 			  burningOffers = swipe.classList.contains('swiper--burning-offers');
 
 		swipeNav.className = 'swiper-pagination';
@@ -87,8 +87,31 @@
 
 		}
 
-		if (event) {
+		if (totalSelect) {
 
+			toggleSwipe = () => {
+
+				toggleSwipe = false;
+
+				swipeBtns.remove();
+
+				new Swiper(swipe, {
+					effect: 'fade',
+					autoHeight: true,
+					mousewheel: {
+						invert: false,
+					},
+					pagination: {
+						el: swipeNav,
+						clickable: true,
+						bulletClass: 'button',
+						bulletActiveClass: 'is-active'
+					}
+				});
+
+			}
+
+/*
 			toggleSwipe = () => {
 
 				resetSwipe();
@@ -117,7 +140,7 @@
 			}
 
 			swipe.addEventListener("swiperResize",toggleSwipe);
-
+*/
 		}
 
 		swipe.addEventListener('swiperJsLoad', () => {

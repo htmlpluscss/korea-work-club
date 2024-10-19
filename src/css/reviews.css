@@ -3,6 +3,12 @@
 	padding: var(--space) 0;
 	position: relative;
 
+	&--2 {
+
+		padding-bottom: var(--margin);
+
+	}
+
 	&--2 &__bg {
 
 		img {
@@ -94,6 +100,7 @@
 				height: 100%;
 				top: 0;
 				left: 0;
+				background-color: #000;
 
 			}
 
@@ -106,7 +113,7 @@
 		display: flex;
 		justify-content: center;
 		gap: var(--margin);
-		margin: var(--space) 0;
+		margin-top: var(--space);
 
 	}
 
