@@ -243,7 +243,7 @@
 				appendScript();
 
 			}
-			else {
+			else if ( fastLoadScriptTimeout ) {
 
 				fastLoadScriptTimeout = setTimeout( appendScript, 30000 );
 
