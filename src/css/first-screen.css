@@ -3,7 +3,6 @@
 	position: relative;
 	padding: 128px 0;
 	background-image: linear-gradient(to top right, #61e4df, #fff0e1);
-	background-size: 100% 100%;
 
 	&__content {
 

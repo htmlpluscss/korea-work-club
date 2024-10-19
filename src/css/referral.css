@@ -1,5 +1,93 @@
 .referral {
 
+	padding: var(--space) 0;
+	position: relative;
+	background-image: linear-gradient(to top right, #61e4df, #fff0e1);
 
+	&__content {
+
+		max-width: 650px;
+		position: relative;
+
+		@media $mdWidth {
+
+
+		}
+
+		@media $smWidth {
+
+		}
+
+	}
+
+	&__title {
+
+		padding-bottom: 10px;
+
+	}
+
+	&__text {
+
+		margin: var(--margin) 0;
+
+		a {
+
+			text-decoration: underline;
+			color: var(--link);
+			font-weight: 700;
+
+			@media $desktop {
+
+				&:hover {
+
+					text-decoration-color: transparent;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__btns {
+
+		display: flex;
+		justify-content: center;
+		gap: var(--margin);
+		margin-top: 120px;
+
+	}
+
+	&__img {
+
+		position: absolute;
+		top: 0;
+		left: 50%;
+		right: 0;
+		padding-left: var(--margin);
+		bottom: 120px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		pointer-events: none;
+
+	}
+
+	&__bg {
+
+		position: relative;
+		height: 0;
+		pointer-events: none;
+
+		img {
+
+			position: absolute;
+			top: -128px;
+			left: -72px;
+
+		}
+
+	}
 
 }
