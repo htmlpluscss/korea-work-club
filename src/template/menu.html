@@ -12,7 +12,7 @@
 {% for item in [
 	{
 		name : 'Вакансия Хостес',
-		hash : 'work'
+		hash : 'telegram'
 	},
 	{
 		name : 'Отзывы',
@@ -24,14 +24,20 @@
 	},
 	{
 		name : 'Анкета',
-		hash : ''
+		modal : 'form'
 	}
 ] -%}
 
 			<li>
+	{% if item.modal %}
+				<button class="button" data-modal="{{ item.modal }}" type="button">
+					{{ item.name }}
+				</button>
+	{% else %}
 				<a href="#{{ item.hash }}">
 					{{ item.name }}
 				</a>
+	{% endif %}
 			</li>
 
 {%- endfor %}
