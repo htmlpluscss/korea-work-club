@@ -1,6 +1,6 @@
 .total-select {
 
-	padding: var(--space) 0;
+	padding: var(--space) 0 var(--margin);
 	position: relative;
 
 	&__bg {

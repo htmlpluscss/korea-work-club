@@ -3,7 +3,8 @@
 	padding: var(--space) 0;
 	position: relative;
 
-	&--2 {
+	&--2,
+	&--3 {
 
 		padding-bottom: var(--margin);
 
@@ -70,6 +71,12 @@
 
 	}
 
+	&__title {
+
+		margin-bottom: var(--space);
+
+	}
+
 	&__text {
 
 		margin: var(--space) 0 var(--margin);
@@ -79,6 +86,12 @@
 	&--2 &__text {
 
 		margin: var(--margin) 0;
+
+	}
+
+	&--3 &__list {
+
+		margin: var(--margin);
 
 	}
 
@@ -114,6 +127,44 @@
 		justify-content: center;
 		gap: var(--margin);
 		margin-top: var(--space);
+
+	}
+
+	&__checked {
+
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+
+			width: 50%;
+			flex-shrink: 0;
+			padding: 0 80px 60px 124px;
+			font-size: 24px;
+
+			svg {
+
+				position: absolute;
+				top: 0;
+				left: 12px;
+				color: var(--link);
+
+			}
+
+			b {
+
+				display: block;
+				margin-bottom: 10px;
+
+			}
+
+			&:nth-child(4) {
+
+				width: 40%;
+
+			}
+
+		}
 
 	}
 

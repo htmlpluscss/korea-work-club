@@ -128,37 +128,9 @@ li {
 
 .h4 {
 
-	font-size: 32px;
-	font-weight: 500;
-	line-height: 1.2;
-
-	@media $mdWidth {
-
-
-	}
-
-	@media $smWidth {
-
-
-	}
-
-}
-
-.h5 {
-
+	font-weight: 700;
 	font-size: 24px;
-	font-weight: 500;
-	line-height: 1.2;
-
-	@media $mdWidth {
-
-
-	}
-
-	@media $smWidth {
-
-
-	}
+	line-height: 1.1;
 
 }
 

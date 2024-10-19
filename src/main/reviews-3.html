@@ -1,0 +1,84 @@
+		<div class="reviews reviews--3">
+
+			<div class="reviews__bg-full">
+
+				<img src="/img/subscribe-telegram/bg.webp" alt="" loading="lazy" width="1340" height="754">
+
+			</div>
+
+			<div class="center">
+
+				<div class="reviews__content">
+
+					<h2 class="reviews__title h1">
+						С нами комфортно и безопасно
+					</h2>
+
+					<ul class="reviews__checked">
+
+{% for item in [
+	{
+		name : "Кредитуем перелет в Корею до 500$",
+		text : "Купим билет на самолет, встретим в аэропорту и бесплатно предоставим жилье в Корее на период работы"
+	},
+	{
+		name : "Гарантируем безопасность&nbsp;24/7",
+		text : "Менеджеры агентства на связи 24/7. Вы будете работать и проживать в компании русскоязычных девушек"
+	},
+	{
+		name : "от 200 000 ₽ средний заработок в месяц",
+		text : "Состоит из оклада, времени проведенного с гостями и чаевых. Выплачивается стабильно, один раз в месяц или в неделю"
+	},
+	{
+		name : "Не работаем с интимом",
+		text : "Это запрещено законодательством"
+	}
+] %}
+
+						<li>
+
+							<svg width="90" height="90" viewBox="0 0 128 128">
+								<path d="M111.119 37.427 99.611 25.92a3 3 0 0 0-4.242 0L48.694 72.596 32.732 56.635c-1.125-1.125-3.117-1.125-4.242 0L16.88 68.247a2.998 2.998 0 0 0 0 4.242l29.589 29.59a3 3 0 0 0 4.242 0l60.408-60.409a3.002 3.002 0 0 0 0-4.243z"/>
+							</svg>
+
+							<b class="h3">
+								{{ item.name | safe }}
+							</b>
+
+							{{ item.text | safe }}
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>
+
+				<ul class="reviews__list">
+
+{% for id in ["hK0BOyg6ZJM","zV6Z9UebzFc","N1ViYOEzym0"] %}
+
+					<li data-youtube="{{ id }}">
+
+						<a href="https://www.youtube.com/shorts/{{ id }}">
+							Отзыв о работе хостес в Южной Корее с Korea Work
+						</a>
+
+					</li>
+
+{% endfor %}
+
+				</ul>
+
+				<div class="reviews__btns">
+
+					<button class="btn" data-modal="form" type="button">
+						Заполнить анкету
+					</button>
+
+				</div>
+
+			</div>
+
+		</div>

@@ -31,9 +31,7 @@
 
 	const observer = new IntersectionObserver((entries, observer) => {
 
-		let isInViewport = false;
-
-		isInViewport = [...entries].some( entry => {
+		const isIntersecting = [...entries].some( entry => {
 
 			observer.unobserve(entry.target);
 
@@ -41,12 +39,12 @@
 
 		});
 
-		if ( isInViewport ) {
+		if ( isIntersecting ) {
 
 			appendFrame();
 
 		}
-		else {
+		else if ( fastLoadTimeout ) {
 
 			fastLoadTimeout = setTimeout( appendFrame, 30000 );
 

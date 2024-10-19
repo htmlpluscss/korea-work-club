@@ -1,0 +1,116 @@
+.income {
+
+	padding: var(--space) 0;
+	position: relative;
+
+	&__bg {
+
+		&-full {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.5;
+			pointer-events: none;
+			display: flex;
+			align-items: flex-end;
+
+			img {
+
+				width: 100%;
+				height: auto;
+
+			}
+
+		}
+
+	}
+
+	&__content {
+
+		position: relative;
+
+	}
+
+	&__title {
+
+		margin-bottom: var(--margin);
+
+	}
+
+	&__text {
+
+		margin: var(--margin) 0 var(--space);
+
+	}
+
+	&__list {
+
+		display: flex;
+		justify-content: center;
+		gap: var(--indent);
+
+		li {
+
+			border: 3px solid #e5e5e5;
+			padding: 20px;
+			width: 340px;
+
+			svg {
+
+				margin: -72px auto 24px;
+				color: var(--red);
+
+			}
+
+			&::before {
+
+				position: absolute;
+				height: 10px;
+				top: -6px;
+				left: 60px;
+				right: 60px;
+				content: '';
+				background-color: var(--bg);
+
+			}
+
+		}
+
+		&-value {
+
+			text-align: center;
+			font-size: 46px;
+			padding: 5px;
+
+		}
+
+		&-name {
+
+			text-align: center;
+			padding: 20px 5px;
+
+		}
+
+		&-text {
+
+			font-size: 20px;
+			line-height: 1.4;
+			padding: 5px;
+
+		}
+
+	}
+
+	&__btns {
+
+		display: flex;
+		justify-content: center;
+		gap: var(--margin);
+		margin-top: var(--space);
+
+	}
+
+}
