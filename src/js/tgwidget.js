@@ -4,6 +4,8 @@
 
 	const init = () => {
 
+		clearTimeout(fastLoadTimeout);
+
 		fastLoadTimeout = null;
 
 		const iframe = document.createElement('iframe');

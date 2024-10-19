@@ -4,6 +4,8 @@
 
 	const init = () => {
 
+		clearTimeout(fastLoadTimeout);
+
 		fastLoadTimeout = null;
 
 		[...elems].forEach( el => {

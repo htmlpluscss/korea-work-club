@@ -3,6 +3,24 @@
 	padding: var(--space) 0;
 	position: relative;
 
+	&--2 &__bg {
+
+		img {
+
+			left: 180px;
+			top: -140px;
+
+		}
+
+		&-full {
+
+			bottom: 200px;
+			transform: none;
+
+		}
+
+	}
+
 	&__bg {
 
 		position: relative;
@@ -52,6 +70,12 @@
 
 	}
 
+	&--2 &__text {
+
+		margin: var(--margin) 0;
+
+	}
+
 	&__list {
 
 		display: flex;
@@ -74,6 +98,15 @@
 			}
 
 		}
+
+	}
+
+	&__btns {
+
+		display: flex;
+		justify-content: center;
+		gap: var(--margin);
+		margin: var(--space) 0;
 
 	}
 

@@ -191,6 +191,8 @@
 
 			if ( fastLoadScriptTimeout ) {
 
+				clearTimeout(fastLoadScriptTimeout);
+
 				fastLoadScriptTimeout = null;
 				document.head.append(script);
 
