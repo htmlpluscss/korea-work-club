@@ -1,23 +1,7 @@
 .subscribe-telegram {
 
-	margin: var(--margin) 0;
-	background-image: url(/img/subscribe-telegram/bg.webp);
-	background-position: center;
-	background-repeat: no-repeat;
+	padding: var(--space) 0;
 	position: relative;
-
-	&::before {
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		content: '';
-		opacity: 0.5;
-		background-color: var(--bg);
-
-	}
 
 	&__box {
 
@@ -52,6 +36,7 @@
 		flex-shrink: 0;
 		border-radius: 10px;
 		border: 6px solid #27a7e7;
+		background-color: var(--bg);
 
 		iframe {
 
@@ -69,6 +54,27 @@
 		left: -96px;
 		bottom: -72px;
 		pointer-events: none;
+
+		&-full {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.5;
+			pointer-events: none;
+			display: flex;
+			align-items: center;
+
+			img {
+
+				width: 100%;
+				height: auto;
+
+			}
+
+		}
 
 	}
 

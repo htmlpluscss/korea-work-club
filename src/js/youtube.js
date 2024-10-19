@@ -1,4 +1,4 @@
-( tgwidget => {
+( elems => {
 
 	let fastLoadTimeout = true;
 
@@ -6,11 +6,17 @@
 
 		fastLoadTimeout = null;
 
-		const iframe = document.createElement('iframe');
+		[...elems].forEach( el => {
 
-		iframe.src = tgwidget.getAttribute('data-tgwidget');
+			const iframe = document.createElement('iframe');
 
-		tgwidget.append(iframe);
+			iframe.setAttribute('disablePictureInPicture','true');
+			iframe.setAttribute('allowfullscreen','allowfullscreen');
+			iframe.src = 'https://www.youtube.com/embed/' + el.getAttribute('data-youtube') + '?autoplay=0&loop=0&rel=0&modestbranding=1';
+
+			el.append(iframe);
+
+		});
 
 	}
 
@@ -52,9 +58,9 @@
 
 	});
 
-	observer.observe(tgwidget);
+	[...elems].forEach( el => observer.observe(el) );
 
 	window.addEventListener('scroll',appendFrame);
 	window.addEventListener('click',appendFrame);
 
-})(document.querySelector('[data-tgwidget]'));
+})(document.querySelectorAll('[data-youtube]'));

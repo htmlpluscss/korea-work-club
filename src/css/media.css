@@ -10,6 +10,8 @@
 	width: 1260px;
 	max-width: 100%;
 	margin: 0 auto;
+	position: relative;
+	z-index: 2;
 	padding: 0 var(--indent);
 
 }

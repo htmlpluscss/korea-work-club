@@ -5,10 +5,6 @@
 	background-image: linear-gradient(to top right, #61e4df, #fff0e1);
 	background-size: 100% 100%;
 
-	&__box {
-
-	}
-
 	&__content {
 
 		max-width: 800px;
@@ -74,6 +70,7 @@
 		right: 0;
 		bottom: 0;
 		overflow: hidden;
+		pointer-events: none;
 
 		img {
 

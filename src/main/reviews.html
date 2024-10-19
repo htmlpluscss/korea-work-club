@@ -1,0 +1,46 @@
+		<div class="reviews" id="reviews">
+
+			<div class="reviews__bg-full">
+
+				<img src="/img/subscribe-telegram/bg.webp" alt="" loading="lazy" width="1340" height="754">
+
+			</div>
+
+			<div class="center">
+
+				<div class="reviews__bg">
+
+					<img src="/img/reviews/bg.webp" alt="" loading="lazy" width="250" height="250">
+
+				</div>
+
+				<div class="reviews__content">
+
+					<h2 class="h1">
+						Лети в Корею только с проверенным агентством
+					</h2>
+
+					<p class="reviews__text">
+						Смотри и слушай, что говорят девушки, которые сейчас в Корее
+					</p>
+
+				</div>
+
+				<ul class="reviews__list">
+
+{% for id in ["4bYccoz-MGU","hVqSJd05gHA","XRPOC2St_yg","w-g7SICJCg8"] %}
+
+					<li data-youtube="{{ id }}">
+
+						<a href="https://www.youtube.com/watch?v={{ id }}">
+							Отзыв о работе хостес в Южной Корее с Korea Work
+						</a>
+
+					</li>
+{% endfor %}
+
+				</ul>
+
+			</div>
+
+		</div>
