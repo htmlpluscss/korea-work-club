@@ -13,46 +13,157 @@
 			resetSwipe = null;
 
 		const swipeControls = document.createElement('div'),
-			  swipeNav = document.createElement('div');
+			  swipeNav = document.createElement('div'),
+			  swipeBtns = document.createElement('div'),
+			  swipeNext = document.createElement('button'),
+			  swipePrev = document.createElement('button'),
+			  scrollbar = swipe.querySelector('.swiper-scrollbar'),
+			  items = swipe.querySelectorAll('.swiper-slide'),
+			  count = items.length,
+			  event = swipe.classList.contains('swiper--event'),
+			  investments = swipe.classList.contains('swiper--investments'),
+			  burningOffers = swipe.classList.contains('swiper--burning-offers');
 
 		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls';
 
+		swipeBtns.className = 'swiper-navigation';
+		swipePrev.className = 'swiper-button-prev button';
+		swipeNext.className = 'swiper-button-next button';
+
+		swipePrev.setAttribute('aria-label','Previous slide');
+		swipeNext.setAttribute('aria-label','Next slide');
+
+		swipePrev.innerHTML = '<svg width="36" height="36" viewBox="0 0 36 36"><path stroke-width="1.5" d="M20.7 10.8 13.5 18l7.2 7.2"/></svg>';
+		swipeNext.innerHTML = '<svg width="36" height="36" viewBox="0 0 36 36"><path stroke-width="1.5" d="m15.3 10.8 7.2 7.2-7.2 7.2"/></svg>';
+
+		swipeBtns.append(swipePrev);
+		swipeBtns.append(swipeNext);
+		swipeControls.append(swipeBtns);
 		swipeControls.append(swipeNav);
 
-		toggleSwipe = () => {
+		resetSwipe = () => {
 
-			const dependent = document.querySelectorAll(swipe.getAttribute('data-dependent'));
+			if(mySwipe) {
 
-			new Swiper(swipe, {
-				loop: true,
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: true
-				},
-				pagination: {
-					el: swipeNav,
-					clickable: true,
-					bulletClass: 'button',
-					bulletActiveClass: 'is-active'
-				},
-				on: {
-					slideChange: () => {
-						dependent.forEach( (el,index) => el.classList.toggle('is-current', swipe.swiper.realIndex === index) );
+				mySwipe.destroy(false,true);
+				mySwipe = undefined;
+
+			}
+
+			swipeNav.classList.add('hide');
+			swipeBtns.classList.add('hide');
+			swipeControls.classList.add('hide');
+
+			if ( swipe.closest('.swiper-container-style') ) {
+
+				swipe.closest('.swiper-container-style').classList.remove('swiper-container-style');
+
+			}
+
+		}
+
+		if (burningOffers) {
+
+			toggleSwipe = () => {
+
+				toggleSwipe = false;
+
+				new Swiper(swipe, {
+					loop: true,
+					navigation: {
+						nextEl: swipeNext,
+						prevEl: swipePrev
+					},
+					pagination: {
+						el: swipeNav,
+						clickable: true,
+						bulletClass: 'button',
+						bulletActiveClass: 'is-active'
 					}
+				});
+
+			}
+
+		}
+
+		if (event) {
+
+			toggleSwipe = () => {
+
+				resetSwipe();
+
+				if ( document.documentElement.clientWidth < 1199 ) {
+
+					swipe.parentNode.classList.add('swiper-container-style');
+
+					mySwipe = new Swiper(swipe, {
+						loop: false,
+						slidesPerView: 'auto',
+						scrollbar: {
+							el: scrollbar
+						},
+						on: {
+							progress(){
+								if( mySwipe ) {
+									swipe.classList.toggle('is-progress-finish', mySwipe.progress >= 1);
+								}
+							}
+						}
+					});
+
 				}
-			});
+
+			}
+
+			swipe.addEventListener("swiperResize",toggleSwipe);
 
 		}
 
 		swipe.addEventListener('swiperJsLoad', () => {
 
-			swipe.append(swipeControls);
+			swipe.parentNode.append(swipeControls);
 
 			// eager
 			[...swipe.querySelectorAll('[loading="lazy"]')].forEach( img => img.setAttribute('loading','eager') );
 
+			// hide
+			[...items].forEach( el => el.classList.remove('hide') );
+
 			toggleSwipe();
+
+		});
+
+	});
+
+	let resizeTimeout = null,
+		windowWidthOLd = window.innerWidth;
+
+	window.addEventListener("resize", () => {
+
+		window.requestAnimationFrame( () => {
+
+			if (resizeTimeout === null) {
+
+				resizeTimeout = setTimeout( () => {
+
+					resizeTimeout = null;
+
+					if(windowWidthOLd !== window.innerWidth) {
+
+						windowWidthOLd = window.innerWidth;
+
+						if (window.Swiper) {
+
+							[...elems].forEach( swipe => swipe.dispatchEvent(new Event("swiperResize")) );
+
+						}
+
+					}
+
+				}, 1000);
+
+			}
 
 		});
 

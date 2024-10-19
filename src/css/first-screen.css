@@ -27,7 +27,7 @@
 
 	&__title {
 
-		margin: 40px 0;
+		margin: var(--margin) 0;
 
 		small {
 
@@ -55,7 +55,7 @@
 	&__btns {
 
 		display: flex;
-		gap: 40px;
+		gap: var(--margin);
 
 	}
 
@@ -79,7 +79,7 @@
 
 			position: absolute;
 			top: 0;
-			left: 40px;
+			left: var(--margin);
 			width: auto;
 			height: 100%;
 
@@ -91,6 +91,7 @@
 
 		position: relative;
 		height: 0;
+		pointer-events: none;
 
 		img {
 

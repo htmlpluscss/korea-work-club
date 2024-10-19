@@ -11,7 +11,7 @@
 	&__list {
 
 		display: flex;
-		gap: 40px;
+		gap: var(--margin);
 
 		a {
 

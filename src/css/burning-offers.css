@@ -1,0 +1,60 @@
+.burning-offers {
+
+	padding: var(--space) 0;
+	position: relative;
+
+	&__bg {
+
+		position: relative;
+		height: 0;
+		pointer-events: none;
+
+		&--top img {
+
+			position: absolute;
+			top: -32px;
+			right: 200px;
+
+		}
+
+		&--bottom img {
+
+			position: absolute;
+			top: -96px;
+			left: 128px;
+
+		}
+
+	}
+
+	&__title {
+
+		display: flex;
+		margin-bottom: var(--space);
+
+	}
+
+	&__swiper {
+
+		position: relative;
+		margin: 0 auto;
+		width: 1066px;
+
+	}
+
+	&__btns {
+
+		display: flex;
+		gap: var(--margin);
+		justify-content: center;
+		margin-top: var(--space);
+
+	}
+
+	&-item {
+
+		outline:1px solid red;
+
+	}
+
+}

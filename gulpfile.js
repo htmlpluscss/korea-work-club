@@ -121,7 +121,7 @@ gulp.task('js', () => {
 
 		'src/js/js.js',
 		'src/js/*.js',
-		'!src/js/min/swiper-bundle.min.js'
+		'!src/js/swiper-bundle.min.js'
 
 	], {since: gulp.lastRun('js')})
 
@@ -145,6 +145,10 @@ gulp.task('js', () => {
 });
 
 gulp.task('serve', () => {
+
+	gulp.src([
+		'src/js/swiper-bundle.min.js'
+	]).pipe(gulp.dest('build/js'));
 
 	server.init({
 		server: 'build',
