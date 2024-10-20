@@ -3,7 +3,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/montserrat-v26-latin-400.woff2');
+  src: url('/fonts/montserrat-v26-cyrillic_cyrillic-ext_latin-400.woff2');
 }
 
 @font-face {
@@ -11,15 +11,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
-  src: url('/fonts/montserrat-v26-latin-500.woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  src: url('/fonts/montserrat-v26-latin-600.woff2');
+  src: url('/fonts/montserrat-v26-cyrillic_cyrillic-ext_latin-500.woff2');
 }
 
 @font-face {
@@ -27,15 +19,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/montserrat-v26-latin-700.woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 800;
-  src: url('/fonts/montserrat-v26-latin-800.woff2');
+  src: url('/fonts/montserrat-v26-cyrillic_cyrillic-ext_latin-700.woff2');
 }
 
 @font-face {
@@ -43,5 +27,5 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 900;
-  src: url('/fonts/montserrat-v26-latin-900.woff2');
+  src: url('/fonts/montserrat-v26-cyrillic_cyrillic-ext_latin-900.woff2');
 }

@@ -2,58 +2,9 @@
 
 	[...forms].forEach( form => {
 
-		const formStatus = form.closest('.form-status');
-		const validationMessage = form.querySelector('.form__validation-message');
 		const btnSubmit = form.querySelector('.form__submit');
 
-		const validElement = el => {
-
-			validationMessage.textContent = '';
-			btnSubmit.disabled = false;
-
-			if ( el.classList.contains('input') || el.classList.contains('checkbox__input') ) {
-
-				el.parentNode.classList.toggle('is-error', el.checkValidity() === false );
-
-				btnSubmit.disabled = el.checkValidity() === false;
-
-			}
-
-			validationMessage.textContent = el.validationMessage;
-
-		}
-
-		[...form.querySelectorAll('[required]')].forEach( target => {
-
-			['input','change','blur'].forEach( Event => {
-
-				target.addEventListener( Event, event => {
-
-					// required
-
-					if ( target.required ) {
-
-						if ( Event !== 'input' || target.checkValidity() ) {
-
-							validElement(target);
-
-						}
-
-					}
-
-				});
-
-			});
-
-		});
-
 		form.addEventListener('submit', event => {
-
-			if ( !form.checkValidity() ) {
-
-				console.log('Форма не валидна!', form.checkValidity());
-
-			}
 
 			event.preventDefault();
 
@@ -76,7 +27,17 @@
 
 				console.log(result);
 
-				formStatus && formStatus.classList.add('is-done');
+				const eventModalShow = new CustomEvent("modalShow", {
+					detail: {
+						selector: "done"
+					}
+				});
+
+				window.modal.dispatchEvent(eventModalShow);
+
+				btnSubmit.disabled = false;
+
+				form.reset();
 
 			});
 
@@ -85,20 +46,3 @@
 	});
 
 })(document.querySelectorAll('.form'));
-
-( passwords => {
-
-	[...passwords].forEach( password => {
-
-		const btn = password.querySelector('.input-wrap-password__btn');
-		const input = password.querySelector('.input-wrap-password__input');
-
-		btn.addEventListener('click', () => {
-
-			input.type = input.type === 'text' ? 'password' : 'text';
-
-		});
-
-	});
-
-})(document.querySelectorAll('.input-wrap-password'));

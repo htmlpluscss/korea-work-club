@@ -46,6 +46,7 @@
 	padding: 16px 34px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 18px;
 	box-shadow: 0 4px 10px rgba(254, 185, 190, 0.5);
 
@@ -138,10 +139,24 @@
 
 .form {
 
+	&__title {
+
+		margin-bottom: var(--gap);
+
+	}
+
+	&__text {
+
+		font-size: 20px;
+		margin: var(--gap) 0;
+
+	}
+
 	&__inputbox {
 
 		position: relative;
 		display: block;
+		margin: var(--gap) 0;
 
 	}
 
@@ -156,14 +171,8 @@
 	&__submit {
 
 		width: 100%;
-		margin-top: 20px;
-
-		.btn {
-
-			padding: 8px;
-			font-size: 18px;
-
-		}
+		margin-top: var(--margin);
+		padding: 10px;
 
 	}
 

@@ -21,8 +21,6 @@
 
 		window.requestAnimationFrame( () => document.documentElement.classList.remove('scroll-behavior-off') );
 
-		document.querySelector('#modal-video').innerHTML = '';
-
 	});
 
 	modal.addEventListener('keyup', event => {

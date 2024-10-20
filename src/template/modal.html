@@ -2,203 +2,84 @@
 
 		<div class="modal__box">
 
-			<form action="/send/" class="modal__item modal__item--login form box">
+			<form action="/send/" class="modal__item modal__item--form form">
 
-				<input type="hidden" name="subject" value="modal-login">
-				<input type="hidden" name="redirect" value="{{ auth }}">
+				<h3 class="form__title h3">
+					Войти
+				</h3>
 
-				<div class="box__inner">
+				<p class="form__text">
+					Логин или пароль неверные
+				</p>
 
-					<h3 class="form__title h4">
-						Войти
-					</h3>
+				<div class="form__inputbox">
 
-					<div class="form__inputbox">
+					<label for="modal-form-login" class="form__label">
+						Логин
+					</label>
 
-						<label for="modal-login-login" class="form__label">
-							Логин
-						</label>
-
-						<input class="input" name="login" placeholder="Введите данные" required="required" id="modal-login-login">
-
-					</div>
-
-					<div class="form__inputbox">
-
-						<label for="modal-login-password" class="form__label">
-							Пароль
-						</label>
-
-						<input class="input" name="password" placeholder="Введите данные" required="required" id="modal-login-password" type="password">
-
-					</div>
-
-					<div class="form__recovery hide">
-
-						<button class="button" type="button" data-modal="recovery">
-							Забыл пароль
-						</button>
-
-					</div>
-
-					<p class="form__error-text hide">
-						Логин или пароль неверные
-					</p>
-
-					<div class="form__foot">
-
-						<button class="btn form__submit">
-							Войти
-						</button>
-
-						<button class="btn" type="button" data-modal="reg">
-							Регистрация
-						</button>
-
-					</div>
+					<input class="input" name="login" required="required" id="modal-form-login">
 
 				</div>
 
-{% raw %}
+				<div class="form__inputbox">
 
-				<script type="text/html" class="form-template-done">
+					<label for="modal-form-email" class="form__label">
+						E-mail
+					</label>
 
-					<div class="modal-done__ico">
-
-						<svg class="modal-done__ico-ok" width="72" height="72" viewBox="0 0 72 72">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m47.25 29-14 14-7-7"/>
-						</svg>
-
-					</div>
-
-					<div class="modal-done__title h6">
-
-					</div>
-
-					<div class="modal-done__message">
-
-					</div>
-
-				</script>
-
-{% endraw %}
-
-			</form>
-
-			<form action="/send/" class="modal__item modal__item--reg form box">
-
-				<input type="hidden" name="subject" value="modal-reg">
-				<input type="hidden" name="redirect" value="{{ auth }}">
-
-				<div class="box__inner">
-
-					<h3 class="form__title h4">
-						Регистрация
-					</h3>
-
-					<div class="form__inputbox">
-
-						<label for="modal-reg-email" class="form__label">
-							E-mail
-						</label>
-
-						<input class="input" name="email" placeholder="Введите данные" required="required" id="modal-reg-email" type="email">
-
-					</div>
-
-					<div class="form__inputbox">
-
-						<label for="modal-reg-nick" class="form__label">
-							Ваш ник
-						</label>
-
-						<input class="input" name="nick" placeholder="Введите данные" required="required" id="modal-reg-nick">
-
-					</div>
-
-					<div class="form__foot">
-
-						<button class="btn form__submit">
-							Зарегистрироваться
-						</button>
-
-						<button class="btn" type="button" data-modal="login">
-							Войти
-						</button>
-
-					</div>
+					<input class="input" name="email" required="required" id="modal-form-email" type="email">
 
 				</div>
 
-{% raw %}
+				<div class="form__inputbox">
 
-				<script type="text/html" class="form-template-done">
+					<label for="modal-form-phone" class="form__label">
+						Телефон
+					</label>
 
-					<div class="modal-done__ico">
+					<input class="input" name="phone" required="required" id="modal-form-phone" type="tel">
 
-						<svg class="modal-done__ico-reg" width="72" height="72" viewBox="0 0 72 72">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.25 36-7.6-5.7a1.01 1.01 0 0 1-.4-.8V25a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4.45a1.01 1.01 0 0 1-.4.8L36.25 36ZM36.25 36l-7.6 5.7a1.01 1.01 0 0 0-.4.8V47a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.45a1.01 1.01 0 0 0-.4-.8L36.25 36ZM29.59 31h13.27M36.25 41v-5"/>
-						</svg>
+				</div>
 
-					</div>
-
-					<div class="modal-done__title h6">
-						Ваш запрос принят!
-					</div>
-
-					<div class="modal-done__message">
-						Мы находимся на захватывающем этапе бета-тестирования, где каждое место ценно как золото. Скоро придет Ваша очередь! Ожидайте уведомления на Ваш имэйл. <br> Мы готовим для вас нечто особенное!
-					</div>
-
-				</script>
-
-{% endraw %}
+				<button class="btn form__submit">
+					Отправить
+				</button>
 
 			</form>
 
-			<aside class="modal__item modal__item--done box">
+			<aside class="modal__item modal__item--done">
 
-				<div class="box__inner">
+				<div class="modal__ico">
 
-					<div class="modal-done">
+					<svg width="72" height="72" viewBox="0 0 72 72">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.25 36-7.6-5.7a1.01 1.01 0 0 1-.4-.8V25a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4.45a1.01 1.01 0 0 1-.4.8L36.25 36ZM36.25 36l-7.6 5.7a1.01 1.01 0 0 0-.4.8V47a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.45a1.01 1.01 0 0 0-.4-.8L36.25 36ZM29.59 31h13.27M36.25 41v-5"/>
+					</svg>
 
-{% raw %}
+				</div>
 
-					<script type="text/html" class="form-template-error">
+				<p class="modal__title h3">
+					Ваш запрос принят!
+				</p>
 
-						<div class="modal-done__ico">
+				<p class="modal__text">
+					<a href="https://t.me/Korea_hostes" target="_blank" rel="noopener nofollow">Подписаться на телеграм</a> <br> или <a href="https://wa.me/+79222213786" target="_blank" rel="noopener nofollow" title="Whatsapp Korea Work">Написать в WhatsApp</a>
+				</p>
 
-							<svg class="modal-done__ico-error" width="72" height="72" viewBox="0 0 72 72">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.25 33v5M34.53 25l-11 19a2 2 0 0 0 1.72 3h22a2 2 0 0 0 1.73-3l-11-19a1.99 1.99 0 0 0-3.45 0v0Z"/>
-								<path fill="#fff" d="M36.25 44a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
-							</svg>
+				<div class="modal__foot">
 
-						</div>
-
-						<div class="modal-done__title h6">
-							Что-то пошло не так.
-						</div>
-
-						<div class="modal-done__message">
-
-						</div>
-
-					</script>
-
-{% endraw %}
-
-					</div>
+					<button class="btn modal__close" type="button">
+						Закрыть
+					</button>
 
 				</div>
 
 			</aside>
 
 			<button type="button" class="modal__close modal__close-btn button" aria-label="Закрыть">
-
-				<svg width="16" height="16" viewBox="0 0 16 16">
-					<path stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="1.5" d="m12.5 4-8 8M12.5 12l-8-8"/>
+				<svg width="32" height="32" viewBox="0 0 16 16">
+					<path stroke-linecap="square" stroke-linejoin="round" stroke-width="1.5" d="m12.5 4-8 8M12.5 12l-8-8"/>
 				</svg>
-
 			</button>
 
 		</div>
