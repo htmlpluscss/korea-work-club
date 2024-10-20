@@ -218,7 +218,7 @@
 	&__note {
 
 		text-align: center;
-		margin-top: var(--margin);
+		margin-top: var(--gap);
 		font-size: 16px;
 
 	}

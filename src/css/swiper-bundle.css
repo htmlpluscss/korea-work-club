@@ -108,7 +108,7 @@
 			svg {
 
 				fill: none;
-				stroke: var(--color);
+				stroke: currentColor;
 
 			}
 
@@ -135,6 +135,7 @@
 		&-disabled {
 
 			pointer-events: none;
+			opacity: .4;
 
 		}
 

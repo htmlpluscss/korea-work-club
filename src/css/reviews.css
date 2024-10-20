@@ -52,12 +52,12 @@
 			pointer-events: none;
 			display: flex;
 			align-items: flex-end;
-			transform: scaleY(-1) rotate(180deg);
 
 			img {
 
 				width: 100%;
 				height: auto;
+				transform: scale(-1);
 
 			}
 

@@ -20,7 +20,7 @@
 			  scrollbar = swipe.querySelector('.swiper-scrollbar'),
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
-			  event = swipe.classList.contains('swiper--event'),
+			  livingConditions = swipe.classList.contains('swiper--living-conditions'),
 			  totalSelect = swipe.classList.contains('swiper--total-select'),
 			  burningOffers = swipe.classList.contains('swiper--burning-offers');
 
@@ -141,6 +141,27 @@
 
 			swipe.addEventListener("swiperResize",toggleSwipe);
 */
+		}
+
+		if (livingConditions) {
+
+			toggleSwipe = () => {
+
+				toggleSwipe = false;
+
+				swipeNav.remove();
+
+				new Swiper(swipe, {
+					slidesPerView: 3,
+					spaceBetween: 10,
+					navigation: {
+						nextEl: swipeNext,
+						prevEl: swipePrev
+					}
+				});
+
+			}
+
 		}
 
 		swipe.addEventListener('swiperJsLoad', () => {
