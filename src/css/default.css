@@ -53,6 +53,7 @@ a {
 
 	color: var(--bg);
 	background-color: var(--color);
+	-webkit-text-fill-color: var(--bg);
 
 }
 
