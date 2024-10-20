@@ -47,10 +47,9 @@
 
 	}
 
-	&__btns {
+	.btns-bottom {
 
-		display: flex;
-		gap: var(--margin);
+		justify-content: flex-start;
 
 	}
 

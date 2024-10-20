@@ -121,11 +121,8 @@
 
 	}
 
-	&__btns {
+	.btns-bottom {
 
-		display: flex;
-		justify-content: center;
-		gap: var(--margin);
 		margin-top: var(--space);
 
 	}

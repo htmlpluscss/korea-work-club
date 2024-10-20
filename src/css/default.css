@@ -172,6 +172,14 @@ li {
 
 }
 
+.btns-bottom {
+
+	display: flex;
+	justify-content: center;
+	gap: var(--margin);
+
+}
+
 /* hidden
 -----------------------------------------------------------------------------*/
 .hide {

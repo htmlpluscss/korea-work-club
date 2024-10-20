@@ -150,3 +150,77 @@
 	}
 
 }
+
+
+.form {
+
+	&__title {
+
+		margin-bottom: var(--gap);
+
+	}
+
+	&__text {
+
+		font-size: 18px;
+		margin: var(--gap) 0;
+
+		a {
+
+			color: var(--link);
+			text-decoration: underline;
+
+			@media $desktop {
+
+				&:hover {
+
+					text-decoration-color: transparent;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__inputbox {
+
+		position: relative;
+		display: block;
+		margin: var(--gap) 0;
+
+	}
+
+	&__label {
+
+		display: block;
+		font-size: 16px;
+		margin-bottom: 10px;
+
+		&.is-required::after {
+
+			color: var(--red);
+			content: '*';
+
+		}
+
+	}
+
+	&__submit {
+
+		width: 100%;
+		margin-top: var(--margin);
+		padding: 10px;
+
+	}
+
+	&__note {
+
+		text-align: center;
+		margin-top: var(--margin);
+		font-size: 16px;
+
+	}
+
+}
