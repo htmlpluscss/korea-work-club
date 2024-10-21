@@ -6,18 +6,16 @@
 
 				<div class="footer__logo">
 
-					<a href="/">
+					<picture>
 
-						<picture>
+						<source srcset="/img/logo--60x60.webp 1x, /img/logo--120x120.webp 2x" type="image/webp">
+						<source srcset="/img/logo--60x60.png 1x, /img/logo--120x120.png 2x">
 
-							<source srcset="/img/fenix-slogan.svg" media="(max-width: 727px)">
-							<source srcset="/img/fenix.svg">
+						<img src="/img/logo--60x60.png" alt="" width="60" height="60" loading="eager">
 
-							<img src="/img/fenix.svg" width="296" height="32" loading="lazy" alt="">
+					</picture>
 
-						</picture>
-
-					</a>
+					{{ site }}
 
 				</div>
 
@@ -27,88 +25,36 @@
 
 				</div>
 
-				<div class="footer__nav">
+				<div class="footer__contact">
 
-					<div class="footer__menu">
+					<p class="footer__contact-head">
+						Контакты
+					</p>
 
-						<p>
-							{{ translate.LEGAL_INFO[lang] }}
-						</p>
+					<p class="footer__contact-name">
+						Агентство Korea Work
+					</p>
 
-						<ul>
+					<p class="footer__contact-address">
+						Екатеринбург, ул. Малышева, 51 <br>
+						БЦ Высоцкий, 45 этаж, офис 45/06/2
+					</p>
 
-							<li>
-								<a href="{% if lang !== 'en' %}/{{ lang }}{% endif %}/privacy-police/">
-									{{ translate.PRIVACY_POLICY[lang] }}
-								</a>
-							</li>
+					<p class="footer__contact-tel">
+						<a href="tel:+79222213786">Тел. +7 922 221 37 86</a>
+					</p>
 
-							<li>
-								<a href="{% if lang !== 'en' %}/{{ lang }}{% endif %}/terms-and-conditions/">
-									{{ translate.TERMS_CONDITIONS[lang] }}
-								</a>
-							</li>
+				</div>
 
-							<li>
-								<a href="{% if lang !== 'en' %}/{{ lang }}{% endif %}/legal-information/">
-									{{ translate.LEGAL_INFORMATION[lang] }}
-								</a>
-							</li>
+				<div class="footer__copyright">
 
-						</ul>
-
-					</div>
-
-					<div class="footer__menu footer__menu--ico">
-
-						<p>
-							{{ translate.FOOTER_CONTACT[lang] }}
-						</p>
-
-						<ul>
-
-							<li>
-								<a href="https://maps.app.goo.gl/YuqrEadAMb2BnuJd9" target="_blank" rel="noopener nofollow">
-									<svg width="24" height="24" viewBox="0 0 24 24">
-										<path d="M18.36 17.36 12 23.73l-6.36-6.37a9 9 0 1 1 12.72 0ZM12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/>
-									</svg>
-									{{ translate.FOOTER_ADDRESS[lang] | safe }}
-								</a>
-							</li>
-
-							<li>
-								<a href="/">
-									<svg width="24" height="24" viewBox="0 0 24 24">
-										<path d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1ZM7 6v4h4V6H7Zm0 6v2h10v-2H7Zm0 4v2h10v-2H7Zm6-9v2h4V7h-4Z"/>
-									</svg>
-									CEP 88010-120
-								</a>
-							</li>
-
-							<li>
-								<a href="tel:+554841040770">
-									<svg width="24" height="24" viewBox="0 0 24 24">
-										<path d="M21 16.42v3.54a1 1 0 0 1-.93 1c-.44.02-.8.04-1.07.04A16 16 0 0 1 3.05 3.93a1 1 0 0 1 1-.93h3.53c.26 0 .47.2.5.45l.06.55c.2 1.41.62 2.76 1.2 4 .1.2.04.44-.14.57l-2.16 1.54a13.05 13.05 0 0 0 6.85 6.85l1.54-2.16a.46.46 0 0 1 .57-.15 13.9 13.9 0 0 0 4.55 1.27.5.5 0 0 1 .45.5Z"/>
-									</svg>
-									+55 (48) 4104.0770
-								</a>
-							</li>
-
-						</ul>
-
-					</div>
+					<p>
+						© 2024. Все данные, представленные на сайте, носят сугубо информационный характер и не являются исчерпывающими. Для более подробной информации следует обращаться к менеджерам компании по указанным на сайте телефонам. Вся представленная на сайте информация, носит информационный характер и не является публичной офертой, определяемой положениями пункта 2 статьи 437 Гражданского Кодекса РФ.
+					</p>
 
 				</div>
 
 			</div>
-
-		</div>
-
-		<div class="footer__copyright">
-
-			<p>
-				© 2024 {{ translate.COPYRIGHT[lang] }}
-			</p>
 
 		</div>
 

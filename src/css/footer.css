@@ -1,30 +1,24 @@
 .footer {
 
 	flex-shrink: 0;
-	border-top: 1px solid #262626;
+	position: relative;
+	padding: var(--margin) 0;
+	background-image: linear-gradient(to top right, #cfd7e6, #b9f1e8);
 
 	&__grid {
 
 		display: grid;
 		justify-content: space-between;
-		grid-template-columns: 310px 716px;
-		grid-template-areas: "logo nav" "social nav";
-		grid-template-rows: auto 1fr;
-		gap: 72px var(--gap);
-		margin: var(--space) 0;
+		grid-template-columns: 36fr 30fr 32fr;
+		gap: var(--gap) var(--space);
 
 		@media $mdWidth {
 
-			grid-template-columns: 1fr 325px;
-			grid-template-areas: "logo social" "nav nav";
-			gap: 72px 0;
 
 		}
 
 		@media $smWidth {
 
-			display: block;
-			margin: var(--margin) 0;
 
 		}
 
@@ -32,58 +26,55 @@
 
 	&__logo {
 
-		grid-area: logo;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 700;
 
 	}
 
 	&__social {
 
-		grid-area: social;
-
-		@media $tablet {
-
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-
-		}
-
-		@media $smWidth {
-
-			margin: 32px 0;
-
-		}
-
-		ul {
-
-			display: flex;
-			gap: 40px;
-			color: #fff;
-
-			@media $desktop {
-
-				a:hover {
-
-					color: var(--color);
-
-				}
-
-			}
-
-		}
+		grid-row: span 2;
+		grid-column: 2;
 
 	}
 
-	&__nav {
+	&__contact {
 
-		grid-area: nav;
-		display: flex;
-		justify-content: space-between;
+		grid-row: span 2;
+		grid-column: 3;
 
-		@media $smWidth {
+		&-head {
 
-			display: block;
-			margin: 48px 0;
+			text-transform: uppercase;
+			margin-bottom: var(--gap);
+			font-size: 18px;
+			font-weight: 700;
+
+		}
+
+		&-name {
+
+			margin-bottom: var(--gap);
+			font-size: 18px;
+			font-weight: 700;
+
+		}
+
+		&-address {
+
+			font-size: 16px;
+			margin: 10px 0;
+
+		}
+
+		&-tel {
+
+			font-size: 16px;
+			font-weight: 700;
 
 		}
 
@@ -91,70 +82,8 @@
 
 	&__copyright {
 
-		grid-area: copyright;
-		color: #999;
-		text-align: center;
-		padding: 30px 0;
-		border-top: 1px solid #262626;
-
-	}
-
-	&__menu {
-
-		@media $smWidth {
-
-			margin: 32px 0;
-
-		}
-
-		p {
-
-			font-family: Montserrat;
-			font-size: 16px;
-			font-weight: 600;
-			line-height: 28.8px;
-			margin-bottom: 20px;
-			text-transform: uppercase;
-
-		}
-
-		li {
-
-			line-height: 28.8px;
-			margin-top: 10px;
-			color: #999;
-
-			@media $desktop {
-
-				a:hover {
-
-					color: var(--color);
-
-				}
-
-			}
-
-		}
-
-		&--ico li {
-
-			padding-left: 34px;
-
-			@media $desktop {
-
-				width: 325px;
-
-			}
-
-			svg {
-
-				position: absolute;
-				top: 0;
-				left: 0;
-
-			}
-
-		}
+		font-size: 12px;
+		line-height: 1.4;
 
 	}
 
