@@ -1,0 +1,110 @@
+.avia {
+
+	padding: var(--space) 0 var(--margin);
+	position: relative;
+
+	&__bg {
+
+		position: relative;
+		height: 0;
+
+		img {
+
+			position: absolute;
+			top: -180px;
+			left: -48px;
+
+		}
+
+		&-full {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.5;
+			pointer-events: none;
+			display: flex;
+			align-items: flex-end;
+
+			img {
+
+				width: 100%;
+				height: auto;
+				transform: scale(-1);
+
+			}
+
+		}
+
+	}
+
+	&__title {
+
+		margin-bottom: var(--space);
+
+	}
+
+	&__list {
+
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: var(--margin);
+		counter-reset: headings 0;
+		font-weight: 500;
+		font-size: 19px;
+		line-height: 1.5;
+
+		b {
+
+			display: block;
+			margin-bottom: var(--gap);
+
+		}
+
+		li {
+
+			flex-basis: 30%;
+			counter-increment: headings 1;
+
+			&::before {
+
+				content: '0' counter(headings, decimal);
+				display: block;
+				color: var(--red);
+				opacity: 0.2;
+				font-weight: bold;
+				font-size: 164px;
+				line-height: 1;
+				margin-bottom: -36px;
+
+			}
+
+			&::after {
+
+				position: absolute;
+				top: 56px;
+				left: 0;
+				content: '';
+				width: 12%;
+				height: 3px;
+				opacity: .5;
+				background-color: var(--red);
+
+			}
+
+		}
+
+	}
+
+	&__btn {
+
+		margin-top: var(--space);
+		display: flex;
+		justify-content: center;
+
+	}
+
+}

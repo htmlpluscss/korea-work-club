@@ -1,0 +1,48 @@
+	<article class="reviews-grid">
+
+		<div class="center">
+
+			<h2 class="reviews-grid__title h1">
+				Еще больше отзывов от наших девушек
+			</h2>
+
+			<p class="referral__text">
+				Смотри на нашем <a href="https://www.youtube.com/channel/UCxi-FfIQkMTvKdOCG-PZRpw">Ютуб-канале</a> и в Телеграм&nbsp;<a href="https://t.me/Korea_hostes">@Korea_hostes</a>
+			</p>
+
+			<ul class="reviews-grid__list">
+
+{% for id in [
+	"fTLqBDyLumI",
+	"61SiAzRP05k",
+	"W4XAxro3tSQ",
+	"kCdB6mdUK04",
+	"gqOgjPVowuE",
+	"Virco6Yl3UU",
+	"4oBNzP4ZZqg",
+	"G2cgEH8lfTk",
+	"dZ8zNlXosJU"
+] %}
+
+					<li data-youtube="{{ id }}">
+
+						<a href="https://www.youtube.com/watch?v={{ id }}">
+							Отзыв о работе хостес в Южной Корее с Korea Work
+						</a>
+
+					</li>
+{% endfor %}
+
+			</ul>
+
+			<div class="avia__btn">
+
+				<button class="btn" data-modal="form" type="button">
+					Заполнить анкету
+				</button>
+
+			</div>
+
+		</div>
+
+	</article>
