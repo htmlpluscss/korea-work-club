@@ -42,7 +42,7 @@
 	&__text {
 
 		margin: var(--indent) 0;
-		max-width: 1024px;
+		font-weight: 500;
 
 	}
 

@@ -2,6 +2,7 @@
 
 	padding: var(--space) 0;
 	position: relative;
+	overflow: hidden;
 
 	&__box {
 
@@ -13,13 +14,14 @@
 
 	&__content {
 
-		max-width: 640px;
+		max-width: 680px;
 
 	}
 
 	&__text {
 
-		margin: var(--space) 0;
+		margin: var(--space) 0 var(--margin);
+		font-weight: 500;
 
 	}
 

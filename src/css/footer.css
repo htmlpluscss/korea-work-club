@@ -3,7 +3,11 @@
 	flex-shrink: 0;
 	position: relative;
 	padding: var(--margin) 0;
-	background-image: linear-gradient(to top right, #cfd7e6, #b9f1e8);
+    background:
+        linear-gradient(to bottom right, #ffefe4, #31e4dd),
+        linear-gradient(to bottom left, #baefe5, #70b4dd),
+        linear-gradient(to top right, #70b4dd, #baefe5),
+        linear-gradient(to top left, #31e4dd, #ffefe4);
 
 	&__grid {
 

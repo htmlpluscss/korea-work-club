@@ -2,6 +2,7 @@
 
 	position: relative;
 	padding: 128px 0;
+	z-index: 1;
 	background-image: linear-gradient(to top right, #61e4df, #fff0e1);
 
 	&__content {
@@ -44,6 +45,7 @@
 	&__text {
 
 		margin: 60px 0;
+		font-weight: 500;
 
 	}
 

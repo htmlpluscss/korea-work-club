@@ -2,6 +2,7 @@
 
 	padding: var(--margin) 0 var(--space);
 	position: relative;
+	overflow: hidden;
 
 	&__bg {
 

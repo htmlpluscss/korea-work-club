@@ -2,6 +2,7 @@
 
 	padding: var(--space) 0;
 	position: relative;
+	z-index: 1;
 	background-image: linear-gradient(to top right, #61e4df, #fff0e1);
 
 	&__content {
@@ -30,16 +31,19 @@
 
 		margin: var(--space) 0 var(--margin);
 		text-align: center;
+		font-weight: 500;
 
 	}
 
 	&__list {
 
 		max-width: 567px;
+		font-weight: 500;
 
 		small {
 
 			font-style: italic;
+			font-size: 80%;
 
 		}
 

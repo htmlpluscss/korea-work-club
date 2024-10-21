@@ -2,6 +2,7 @@
 
 	padding: var(--margin) 0;
 	position: relative;
+	overflow: hidden;
 
 	&__bg {
 
@@ -56,6 +57,7 @@
 	&__text {
 
 		margin: var(--indent) 0;
+		font-weight: 500;
 		max-width: 1024px;
 
 	}

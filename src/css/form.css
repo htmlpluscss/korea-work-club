@@ -118,7 +118,7 @@
 	&:focus {
 
 		outline: none;
-		box-shadow: 0 4px 10px rgba(254, 185, 190, 0.5);
+		box-shadow: 0 0 8px #fc404d !important;
 
 	}
 

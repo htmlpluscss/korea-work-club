@@ -2,11 +2,12 @@
 
 	padding: var(--space) 0;
 	position: relative;
+	z-index: 1;
 	background-image: linear-gradient(to top right, #61e4df, #fff0e1);
 
 	&__content {
 
-		max-width: 650px;
+		max-width: 680px;
 		position: relative;
 
 		@media $mdWidth {
@@ -29,6 +30,7 @@
 	&__text {
 
 		margin: var(--margin) 0;
+		font-weight: 500;
 
 		a {
 
@@ -65,7 +67,7 @@
 		top: 0;
 		left: 50%;
 		right: 0;
-		padding-left: var(--margin);
+		padding-left: 100px;
 		bottom: 120px;
 		overflow: hidden;
 		display: flex;
