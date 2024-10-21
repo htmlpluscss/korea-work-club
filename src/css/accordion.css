@@ -1,0 +1,68 @@
+.accordion {
+
+	position: relative;
+
+	&__body {
+
+		overflow: hidden;
+		position: relative;
+		max-height: 0;
+		opacity: 0;
+		transition: opacity var(--transitionDefault);
+
+	}
+
+	.is-open &__body {
+
+		padding-bottom: 30px;
+
+		overflow: visible;
+		max-height: 900px;
+		opacity: 1;
+		transition: max-height var(--transitionDefault), opacity var(--transitionDefault);
+
+	}
+
+	&__head {
+
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+		user-select: none;
+
+		svg {
+
+			position: absolute;
+			top: 10px;
+			left: -45px;
+			border-radius: 50%;
+			background-color: #c6faf0;
+			stroke: currentColor;
+			transform: rotate(0deg);
+
+			@media $smWidth {
+
+				width: 24px;
+				height: 24px;
+
+			}
+
+		}
+
+	}
+
+	.is-open &__head svg {
+
+		transform: rotate(90deg);
+
+		line:first-child {
+
+			opacity: 0;
+
+		}
+
+	}
+
+}

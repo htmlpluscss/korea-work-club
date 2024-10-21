@@ -1,0 +1,86 @@
+.faq {
+
+	padding: var(--margin) 0 var(--space);
+	position: relative;
+
+	&__bg {
+
+		&-full {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.5;
+			pointer-events: none;
+			display: flex;
+			align-items: flex-start;
+
+			img {
+
+				width: 100%;
+				height: auto;
+
+			}
+
+		}
+
+	}
+
+	&__content {
+
+		position: relative;
+
+	}
+
+	&__title {
+
+		margin-bottom: var(--space);
+
+	}
+
+	&__list {
+
+		max-width: 700px;
+		margin-left: 72px;
+
+	}
+
+	&__item {
+
+		background-color: #feb9be;
+		padding: 0 30px;
+		margin: 30px 0;
+		position: relative;
+
+	}
+
+	dt {
+
+		text-transform: uppercase;
+		padding: 20px 0;
+		cursor: pointer;
+
+	}
+
+	dd {
+
+		font-size: 18px;
+		line-height: 1.4;
+
+		ul {
+
+			margin: 24px;
+
+			li {
+
+				list-style: inside disc;
+
+			}
+
+		}
+
+	}
+
+}
