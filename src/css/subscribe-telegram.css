@@ -70,6 +70,20 @@
 		bottom: -72px;
 		pointer-events: none;
 
+		@media $mdWidth {
+
+			left: -48px;
+			bottom: -30px;
+
+			img {
+
+				width: 69px;
+				height: 69px;
+
+			}
+
+		}
+
 		&-full {
 
 			position: absolute;

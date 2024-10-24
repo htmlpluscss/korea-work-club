@@ -50,6 +50,12 @@
 	gap: 18px;
 	box-shadow: 0 4px 10px rgba(254, 185, 190, 0.5);
 
+	@media $mdWidth {
+
+		font-size: 20px;
+
+	}
+
 	@media $desktop {
 
 		&:hover {

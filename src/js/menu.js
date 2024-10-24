@@ -1,5 +1,15 @@
 ( btn => {
 
+	window.addEventListener("scroll", () => {
+
+		window.requestAnimationFrame( () => {
+
+			document.body.classList.remove('is-open-menu');
+
+		});
+
+	});
+
 	window.addEventListener('click', event => {
 
 		if ( event.detail > 1 ) {
