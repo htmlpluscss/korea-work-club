@@ -46,6 +46,12 @@
 		max-width: 700px;
 		margin-left: 72px;
 
+		@media $mdWidth {
+
+			margin-left: 36px;
+
+		}
+
 	}
 
 	&__item {

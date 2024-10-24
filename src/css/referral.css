@@ -10,11 +10,6 @@
 		max-width: 680px;
 		position: relative;
 
-		@media $mdWidth {
-
-
-		}
-
 		@media $smWidth {
 
 		}
@@ -31,6 +26,12 @@
 
 		margin: var(--margin) 0;
 		font-weight: 500;
+
+		@media $mdWidth {
+
+			backdrop-filter: blur(2px);
+
+		}
 
 		a {
 
@@ -59,6 +60,12 @@
 		gap: var(--margin);
 		margin-top: 120px;
 
+		@media $mdWidth {
+
+			margin-top: var(--space);
+
+		}
+
 	}
 
 	&__img {
@@ -73,6 +80,13 @@
 		display: flex;
 		align-items: center;
 		pointer-events: none;
+
+		@media $mdWidth {
+
+			bottom: 0;
+			align-items: flex-end;
+
+		}
 
 	}
 

@@ -1,10 +1,17 @@
 .menu {
 
 	display: flex;
+	position: relative;
 
 	&__btn {
 
-		display: none;
+		stroke: var(--red);
+
+		@media $desktop {
+
+			display: none;
+
+		}
 
 	}
 
@@ -13,24 +20,50 @@
 		display: flex;
 		gap: var(--margin);
 
-		a,
-		.button {
+		@media $mdWidth {
 
-			font-size: 16px;
-			color: #000;
-			display: block;
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			padding-top: var(--gap);
 
-			@media $desktop {
+			.is-open-menu & {
 
-				&:hover {
-
-					color: #464646;
-
-				}
+				display: flex;
 
 			}
 
 		}
+
+	}
+
+	&__link {
+
+		font-size: 16px;
+		color: #000;
+		display: block;
+		white-space: nowrap;
+
+		@media $desktop {
+
+			&:hover {
+
+				color: #464646;
+
+			}
+
+		}
+
+	}
+
+}
+
+@media $mdWidth {
+
+	.is-open-menu .main {
+
+		filter: blur(2px);
 
 	}
 

@@ -15,6 +15,14 @@
 			top: -180px;
 			left: -48px;
 
+			@media $mdWidth {
+
+				width: 128px;
+				height: auto;
+				object-fit: contain;
+
+			}
+
 		}
 
 		&-full {
@@ -58,6 +66,13 @@
 		font-size: 19px;
 		line-height: 1.5;
 
+		@media $mdWidth {
+
+			font-size: 18px;
+			display: block;
+
+		}
+
 		b {
 
 			display: block;
@@ -70,6 +85,12 @@
 			flex-basis: 30%;
 			counter-increment: headings 1;
 
+			@media $mdWidth {
+
+				padding: 32px 32px 24px 140px;
+
+			}
+
 			&::before {
 
 				content: '0' counter(headings, decimal);
@@ -80,6 +101,17 @@
 				font-size: 164px;
 				line-height: 1;
 				margin-bottom: -36px;
+
+				@media $mdWidth {
+
+					font-size: 96px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 128px;
+					text-align: right;
+
+				}
 
 			}
 

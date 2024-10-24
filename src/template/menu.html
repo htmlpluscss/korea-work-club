@@ -1,9 +1,12 @@
 	<nav class="menu">
 
-		<button class="menu__btn button" type="button" aria-label="открыть меню">
-			<svg width="24" height="24" viewBox="0 0 24 24">
-				<path d="M3 4h18v2H3V4Zm0 7h18v2H3v-2Zm0 7h18v2H3v-2Z"/>
-				<path d="m12 10.59 4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41L12 10.59Z"/>
+		<button class="menu__btn button" type="button" aria-label="переключение меню">
+			<svg width="36" height="36" viewBox="0 0 36 36">
+				<g stroke-width="5" stroke-linecap="round">
+					<line x1="3" y1="7" x2="33" y2="7"/>
+					<line x1="3" y1="18" x2="33" y2="18"/>
+					<line x1="3" y1="29" x2="33" y2="29"/>
+				</g>
 			</svg>
 		</button>
 
@@ -30,11 +33,11 @@
 
 			<li>
 	{% if item.modal %}
-				<button class="button" data-modal="{{ item.modal }}" type="button">
+				<button class="menu__link button" data-modal="{{ item.modal }}" type="button">
 					{{ item.name }}
 				</button>
 	{% else %}
-				<a href="#{{ item.hash }}">
+				<a class="menu__link" href="#{{ item.hash }}">
 					{{ item.name }}
 				</a>
 	{% endif %}

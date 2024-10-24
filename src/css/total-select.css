@@ -15,6 +15,15 @@
 			top: -180px;
 			left: 36px;
 
+			@media $mdWidth {
+
+				top: -48px;
+				width: 128px;
+				height: auto;
+				object-fit: contain;
+
+			}
+
 		}
 
 		&--bottom img {
@@ -22,6 +31,14 @@
 			position: absolute;
 			right: 160px;
 			top: -120px;
+
+			@media $mdWidth {
+
+				width: 128px;
+				height: auto;
+				object-fit: contain;
+
+			}
 
 		}
 
@@ -63,6 +80,14 @@
 			border-radius: 25px;
 			box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 8px 22px rgba(0,0,0,0.1);
 
+			@media $mdWidth {
+
+				left: 0;
+				top: 0;
+				bottom: 0;
+
+			}
+
 		}
 
 		.swiper-controls .swiper-pagination {
@@ -97,6 +122,12 @@
 		display: flex;
 		padding: 40px 20px;
 
+		@media $mdWidth {
+
+			padding: 20px;
+
+		}
+
 		&__btn {
 
 			display: flex;
@@ -113,6 +144,20 @@
 
 			transform: scale(0);
 			opacity: 0;
+
+			@media $mdWidth {
+
+				width: 256px;
+				height: 256px;
+
+				img {
+
+					width: 256px;
+					height: 256px;
+
+				}
+
+			}
 
 			img {
 
@@ -145,6 +190,12 @@
 				opacity: 1;
 				transform: translateY(0px);
 				transition-delay: var(--transitionDefault);
+
+			}
+
+			@media $mdWidth {
+
+				padding: 0 24px;
 
 			}
 

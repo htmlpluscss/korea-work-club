@@ -15,6 +15,15 @@
 			top: -32px;
 			right: 200px;
 
+			@media $mdWidth {
+
+				width: 100px;
+				height: auto;
+				object-fit: contain;
+				right: 0;
+
+			}
+
 		}
 
 		&--bottom img {
@@ -23,6 +32,14 @@
 			top: -128px;
 			left: 128px;
 
+			@media $mdWidth {
+
+				width: 96px;
+				height: auto;
+				object-fit: contain;
+
+			}
+
 		}
 
 	}
@@ -30,6 +47,7 @@
 	&__title {
 
 		display: flex;
+		position: relative;
 		margin-bottom: var(--space);
 
 	}
@@ -40,6 +58,12 @@
 		margin: 0 auto;
 		width: 1066px;
 
+		@media $mdWidth {
+
+			width: 680px;
+
+		}
+
 	}
 
 	&__btns {
@@ -48,21 +72,25 @@
 		gap: var(--margin);
 		justify-content: center;
 		margin-top: var(--space);
+		position: relative;
+		z-index: 1;
 
 	}
 
 	&-item {
 
 		height: 462px;
+		position: relative;
 
 		img {
 
 			position: absolute;
 			top: 0;
 			left: 0;
-			right: 0;
-			bottom: 0;
+			width: 100%;
+			height: 100%;
 			z-index: -1;
+			object-fit: cover;
 
 		}
 
@@ -72,9 +100,22 @@
 			display: flex;
 			flex-direction: column;
 
+			@media $mdWidth {
+
+				padding: 16px 20px;
+
+				img {
+
+					object-position: right;
+
+				}
+
+			}
+
 			&__content {
 
 				max-width: 600px;
+				backdrop-filter: blur(2px);
 
 			}
 
@@ -85,6 +126,13 @@
 				font-size: 50px;
 				color: #cf2348;
 
+				@media $mdWidth {
+
+					font-size: 40px;
+					margin: 16px 0;
+
+				}
+
 			}
 
 			&__desc {
@@ -92,6 +140,12 @@
 				font-size: 46px;
 				margin-left: 72px;
 				color: #6d2d0b;
+
+				@media $mdWidth {
+
+					font-size: 40px;
+
+				}
 
 			}
 
@@ -102,12 +156,25 @@
 				font-size: 70px;
 				color: #cf2348;
 
+				@media $mdWidth {
+
+					font-size: 60px;
+
+				}
+
 			}
 
 			&__note {
 
 				margin-top: auto;
 				font-size: 22px;
+				backdrop-filter: blur(2px);
+
+				@media $mdWidth {
+
+					font-size: 20px;
+
+				}
 
 			}
 
@@ -123,6 +190,7 @@
 
 				max-width: 500px;
 				margin-left: auto;
+				backdrop-filter: blur(2px);
 
 			}
 
@@ -159,6 +227,13 @@
 				font-size: 22px;
 				text-align: right;
 				margin-right: 32px;
+				backdrop-filter: blur(2px);
+
+				@media $mdWidth {
+
+					margin-right: 0;
+
+				}
 
 			}
 

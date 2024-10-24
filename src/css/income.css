@@ -54,16 +54,35 @@
 		justify-content: center;
 		gap: var(--indent);
 
+		@media $mdWidth {
+
+			display: block;
+
+		}
+
 		li {
 
 			border: 3px solid #e5e5e5;
 			padding: 20px;
 			width: 360px;
 
+			@media $mdWidth {
+
+				width: auto;
+				margin: var(--space);
+
+			}
+
 			svg {
 
 				margin: -72px auto 24px;
 				color: var(--red);
+
+				@media $mdWidth {
+
+					margin: -48px auto 0;
+
+				}
 
 			}
 
@@ -93,6 +112,16 @@
 
 			text-align: center;
 			padding: 20px 5px;
+
+			@media $mdWidth {
+
+				br {
+
+					display: none;
+
+				}
+
+			}
 
 		}
 

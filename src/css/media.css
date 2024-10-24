@@ -28,7 +28,9 @@
 
 	:root {
 
-		--space: 60px;
+		--space: 40px;
+		--margin: 30px;
+		--gap: 24px;
 
 	}
 
@@ -46,7 +48,7 @@
 
 	.center {
 
-		width: 684px;
+		width: 768px;
 
 	}
 
@@ -56,7 +58,8 @@
 
 	:root {
 
-		--space: 40px;
+		--space: 36px;
+		--margin: 30px;
 		--indent: 20px;
 
 	}

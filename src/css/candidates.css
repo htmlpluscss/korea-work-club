@@ -10,11 +10,6 @@
 		max-width: 650px;
 		position: relative;
 
-		@media $mdWidth {
-
-
-		}
-
 		@media $smWidth {
 
 		}
@@ -32,6 +27,12 @@
 		margin: var(--space) 0 var(--margin);
 		text-align: center;
 		font-weight: 500;
+
+		@media $mdWidth {
+
+			backdrop-filter: blur(2px);
+
+		}
 
 	}
 
@@ -53,6 +54,12 @@
 			background-repeat: no-repeat;
 			background-size: 52px auto;
 			padding: 10px 0 10px 72px;
+
+			@media $mdWidth {
+
+				backdrop-filter: blur(2px);
+
+			}
 
 		}
 
@@ -78,6 +85,12 @@
 		align-items: flex-start;
 		pointer-events: none;
 
+		@media $mdWidth {
+
+			align-items: flex-end;
+
+		}
+
 	}
 
 	&__bg {
@@ -91,6 +104,14 @@
 			position: absolute;
 			top: -24px;
 			left: 72px;
+
+			@media $mdWidth {
+
+				width: 128px;
+				height: auto;
+				object-fit: contain;
+
+			}
 
 		}
 

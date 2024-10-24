@@ -28,7 +28,7 @@
 		small {
 
 			display: block;
-			font-size: 52px;
+			font-size: 86%;
 			font-weight: 700;
 			margin-top: 20px;
 
@@ -46,6 +46,7 @@
 
 		margin: 60px 0;
 		font-weight: 500;
+		backdrop-filter: blur(2px);
 
 	}
 
@@ -58,6 +59,7 @@
 	&__note {
 
 		font-size: 20px;
+		backdrop-filter: blur(2px);
 		margin: 10px 0;
 
 	}
@@ -95,6 +97,15 @@
 			position: absolute;
 			top: 0;
 			left: -72px;
+
+			@media $mdWidth {
+
+				width: 128px;
+				height: auto;
+				left: -36px;
+				object-fit: contain;
+
+			}
 
 		}
 
