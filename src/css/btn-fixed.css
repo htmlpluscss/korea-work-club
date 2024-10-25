@@ -1,0 +1,123 @@
+.btn-fixed {
+
+	position: fixed;
+	right: var(--indent);
+	bottom: var(--indent);
+	z-index: 6;
+
+	&__icon {
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #00a884;
+		border-radius: 50%;
+		color: #fff;
+		width: 72px;
+		height: 72px;
+
+		svg {
+
+			stroke-width: 1px;
+			stroke: currentColor;
+			animation: shake linear 1.5s infinite;
+
+		}
+
+	}
+
+	&__waves {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 50%;
+		animation: waves linear 3s infinite, scale-in .5s cubic-bezier(.25,.46,.45,.94) both;
+
+	}
+
+	&__text {
+
+		position: absolute;
+		top: 50%;
+		right: 100%;
+		transform: translateY(-50%);
+		color: #fff;
+		white-space: nowrap;
+		font-size: 14px;
+		background-color: #00a884;
+		font-weight: 500;
+		padding: 4px 10px;
+		border-radius: 6px;
+		margin-right: 12px;
+		z-index: 1;
+
+		@media $smWidth {
+
+			display: none;
+
+		}
+
+		&::after {
+
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			top: 0;
+			right: -4px;
+			bottom: 0;
+			margin: auto;
+			content: '';
+			transform: rotate(45deg);
+			background-color: #00a884;
+			border-radius: 2px;
+
+		}
+
+	}
+
+}
+
+@keyframes waves {
+	0% {
+	  box-shadow: 0 8px 10px rgba(0, 168, 132, 0.3), 0 0 0 0 rgba(0, 168, 132, 0.2), 0 0 0 0 rgba(0, 168, 132, 0.2);
+	}
+	40% {
+	  box-shadow: 0 8px 10px rgba(0, 168, 132, 0.3), 0 0 0 35px rgba(0, 168, 132, 0.2), 0 0 0 0 rgba(0, 168, 132, 0.2);
+	}
+	80% {
+	  box-shadow: 0 8px 10px rgba(0, 168, 132, 0.3), 0 0 0 55px rgba(0, 168, 132, 0), 0 0 0 26.7px rgba(0, 168, 132, 0.067);
+	}
+	100% {
+	  box-shadow: 0 8px 10px rgba(0, 168, 132, 0.3), 0 0 0 80px rgba(0, 168, 132, 0), 0 0 0 40px rgba(0, 168, 132, 0.0);
+	}
+}
+
+@keyframes shake {
+	0% {
+	  transform: rotate(0) scale(1) skew(0.017rad);
+	}
+	25% {
+	  transform: rotate(0) scale(1) skew(0.017rad);
+	}
+	35% {
+	  transform: rotate(-0.3rad) scale(1) skew(0.017rad);
+	}
+	45% {
+	  transform: rotate(0.3rad) scale(1) skew(0.017rad);
+	}
+	55% {
+	  transform: rotate(-0.3rad) scale(1) skew(0.017rad);
+	}
+	65% {
+	  transform: rotate(0.3rad) scale(1) skew(0.017rad);
+	}
+	75% {
+	  transform: rotate(0) scale(1) skew(0.017rad);
+	}
+	100% {
+	  transform: rotate(0) scale(1) skew(0.017rad);
+	}
+}

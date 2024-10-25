@@ -33,18 +33,18 @@
 
 				if( item === activeItem ){
 
-					item.classList.remove('is-open');
+//					item.classList.remove('is-open');
 					activeItem = null;
 
 				} else {
 
 					activeItem = item;
 
-					//[...items].forEach( el => el.classList.toggle('is-open', el === item));
-
-					item.classList.add('is-open');
+//					[...items].forEach( el => el.classList.toggle('is-open', el === item));
 
 				}
+
+				item.classList.toggle('is-open');
 
 			});
 

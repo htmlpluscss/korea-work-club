@@ -90,11 +90,11 @@
 
 		ul {
 
-			margin: 24px;
+			margin: var(--gap);
 
 			li {
 
-				list-style: inside disc;
+				list-style: outside disc;
 
 			}
 
