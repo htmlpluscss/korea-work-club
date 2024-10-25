@@ -25,6 +25,8 @@
 
 		@media $smWidth {
 
+			display: flex;
+			flex-direction: column;
 
 		}
 
@@ -75,6 +77,12 @@
 			font-size: 18px;
 			font-weight: 700;
 
+			@media $smWidth {
+
+				display: none;
+
+			}
+
 		}
 
 		&-name {
@@ -82,6 +90,12 @@
 			margin-bottom: var(--gap);
 			font-size: 18px;
 			font-weight: 700;
+
+			@media $smWidth {
+
+				margin: 0;
+
+			}
 
 		}
 
@@ -96,6 +110,12 @@
 
 			font-size: 16px;
 			font-weight: 700;
+
+			@media $smWidth {
+
+				display: none;
+
+			}
 
 			a {
 
@@ -117,6 +137,12 @@
 		@media $mdWidth {
 
 			order: 3
+
+		}
+
+		@media $smWidth {
+
+			order: 4;
 
 		}
 

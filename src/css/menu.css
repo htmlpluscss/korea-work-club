@@ -3,6 +3,12 @@
 	display: flex;
 	position: relative;
 
+	@media $smWidth {
+
+		position: static;
+
+	}
+
 	&__btn {
 
 		stroke: var(--red);
@@ -10,6 +16,32 @@
 		@media $desktop {
 
 			display: none;
+
+		}
+
+		line {
+
+			transition: var(--transitionDefault);
+
+			.is-open-menu & {
+
+				opacity: 0;
+
+				&:first-child {
+
+					opacity: 1;
+					transform: translate(10px, 0) rotate(45deg);
+
+				}
+
+				&:last-child {
+
+					opacity: 1;
+					transform: translate(-15px, 10px) rotate(-45deg);
+
+				}
+
+			}
 
 		}
 
@@ -36,6 +68,14 @@
 
 		}
 
+		@media $smWidth {
+
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: var(--indent);
+
+		}
+
 	}
 
 	&__link {
@@ -52,6 +92,12 @@
 				color: #464646;
 
 			}
+
+		}
+
+		@media $smWidth {
+
+			font-weight: 500;
 
 		}
 

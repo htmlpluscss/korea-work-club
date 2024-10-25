@@ -91,6 +91,13 @@
 
 		}
 
+		@media $smWidth {
+
+			left: 0;
+			opacity: .7;
+
+		}
+
 	}
 
 	&__bg {

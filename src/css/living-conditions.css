@@ -75,6 +75,38 @@
 
 		margin-top: var(--space);
 
+		@media $smWidth {
+
+			margin-left: calc( var(--indent) * -1);
+			margin-right: calc( var(--indent) * -1);
+
+			.swiper-slide {
+
+				padding: 0 var(--indent);
+
+			}
+
+			.swiper {
+
+				border-radius: 0;
+
+			}
+
+		}
+
+		.swiper {
+
+			border-radius: 10px;
+
+		}
+
+		.swiper-controls .swiper-pagination {
+
+			position: relative;
+			top: 0;
+
+		}
+
 		img {
 
 			width: 100%;

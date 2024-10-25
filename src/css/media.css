@@ -89,6 +89,8 @@
 
 	:root {
 
+		--space: 26px;
+		--margin: 20px;
 		--indent: 10px;
 
 	}

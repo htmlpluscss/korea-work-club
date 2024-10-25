@@ -88,6 +88,14 @@
 
 		}
 
+		@media $smWidth {
+
+			padding: 0;
+			left: 0;
+			opacity: .5;
+
+		}
+
 	}
 
 	&__bg {
@@ -101,6 +109,15 @@
 			position: absolute;
 			top: -128px;
 			left: -72px;
+
+			@media $smWidth {
+
+				width: 96px;
+				height: auto;
+				left: -48px;
+				top: -60px;
+
+			}
 
 		}
 

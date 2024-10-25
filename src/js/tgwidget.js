@@ -12,7 +12,7 @@
 
 		iframe.src = tgwidget.getAttribute('data-tgwidget');
 
-		tgwidget.append(iframe);
+//		tgwidget.append(iframe);
 
 	}
 

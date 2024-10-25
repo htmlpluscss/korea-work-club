@@ -91,46 +91,91 @@
 
 			toggleSwipe = () => {
 
-				toggleSwipe = false;
+				resetSwipe();
 
-				swipeBtns.remove();
+				swipe.parentNode.classList.add('swiper-container-style');
+				swipeBtns.classList.add('hide');
+				swipeNav.classList.remove('hide');
+				swipeControls.classList.remove('hide');
 
-				new Swiper(swipe, {
-					effect: 'fade',
-					autoHeight: true,
-					mousewheel: {
-						invert: false,
-					},
-					pagination: {
-						el: swipeNav,
-						clickable: true,
-						bulletClass: 'button',
-						bulletActiveClass: 'is-active'
-					}
-				});
+				if ( document.documentElement.clientWidth < 1200 ) {
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						autoHeight: true,
+						pagination: {
+							el: swipeNav,
+							clickable: true,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
+						}
+					});
+
+				}
+				else {
+
+					mySwipe = new Swiper(swipe, {
+						effect: 'fade',
+						autoHeight: true,
+						mousewheel: {
+							invert: false,
+						},
+						pagination: {
+							el: swipeNav,
+							clickable: true,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
+						}
+					});
+
+				}
 
 			}
 
-/*
+			swipe.addEventListener("swiperResize",toggleSwipe);
+
+		}
+
+		if (livingConditions) {
+
 			toggleSwipe = () => {
 
 				resetSwipe();
 
-				if ( document.documentElement.clientWidth < 1199 ) {
+				swipe.parentNode.classList.add('swiper-container-style');
+				swipeControls.classList.remove('hide');
 
-					swipe.parentNode.classList.add('swiper-container-style');
+				if ( document.documentElement.clientWidth < 768 ) {
+
+					swipeBtns.classList.add('hide');
+					swipeNav.classList.remove('hide');
 
 					mySwipe = new Swiper(swipe, {
-						loop: false,
-						slidesPerView: 'auto',
-						scrollbar: {
-							el: scrollbar
+						loop: true,
+						pagination: {
+							el: swipeNav,
+							clickable: true,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
+						}
+					});
+
+				}
+				else {
+
+					swipeBtns.classList.remove('hide');
+					swipeNav.classList.add('hide');
+
+					mySwipe = new Swiper(swipe, {
+						slidesPerView: 2,
+						spaceBetween: 10,
+						navigation: {
+							nextEl: swipeNext,
+							prevEl: swipePrev
 						},
-						on: {
-							progress(){
-								if( mySwipe ) {
-									swipe.classList.toggle('is-progress-finish', mySwipe.progress >= 1);
-								}
+						breakpoints: {
+							1200: {
+								slidesPerView: 3
 							}
 						}
 					});
@@ -140,27 +185,6 @@
 			}
 
 			swipe.addEventListener("swiperResize",toggleSwipe);
-*/
-		}
-
-		if (livingConditions) {
-
-			toggleSwipe = () => {
-
-				toggleSwipe = false;
-
-				swipeNav.remove();
-
-				new Swiper(swipe, {
-					slidesPerView: 3,
-					spaceBetween: 10,
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					}
-				});
-
-			}
 
 		}
 

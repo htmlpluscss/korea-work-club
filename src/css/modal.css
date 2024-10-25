@@ -9,6 +9,12 @@
 	justify-content: center;
 	padding: var(--indent);
 
+	@media $smWidth {
+
+		padding: 0;
+
+	}
+
 	&__box {
 
 		position: relative;
@@ -26,6 +32,9 @@
 		background-color: var(--bg);
 
 		@media $smWidth {
+
+			border-radius: 0;
+			padding: var(--space) var(--indent);
 
 		}
 
@@ -76,7 +85,7 @@
 
 	&__title {
 
-		margin-bottom: var(--gap);
+		margin: 0 0 var(--gap);
 
 	}
 
@@ -157,7 +166,7 @@
 
 	&__title {
 
-		margin-bottom: var(--gap);
+		margin: 0 32px var(--gap);
 		text-align: center;
 
 	}

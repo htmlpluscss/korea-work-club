@@ -73,6 +73,13 @@
 
 			}
 
+			@media $smWidth {
+
+				margin: var(--space) auto;
+				max-width: 320px;
+
+			}
+
 			svg {
 
 				margin: -72px auto 24px;

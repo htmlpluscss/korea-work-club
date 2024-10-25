@@ -78,6 +78,12 @@
 			display: block;
 			margin-bottom: var(--gap);
 
+			@media $smWidth {
+
+				margin-bottom: var(--indent);
+
+			}
+
 		}
 
 		li {
@@ -88,6 +94,12 @@
 			@media $mdWidth {
 
 				padding: 32px 32px 24px 140px;
+
+			}
+
+			@media $smWidth {
+
+				padding: 16px 0 24px 72px;
 
 			}
 
@@ -113,6 +125,13 @@
 
 				}
 
+				@media $smWidth {
+
+					width: 60px;
+					font-size: 52px;
+
+				}
+
 			}
 
 			&::after {
@@ -125,6 +144,12 @@
 				height: 3px;
 				opacity: .5;
 				background-color: var(--red);
+
+				@media $smWidth {
+
+					top: 72px;
+
+				}
 
 			}
 

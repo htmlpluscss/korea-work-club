@@ -44,6 +44,12 @@ body {
 
 	}
 
+	@media $xsWidth {
+
+		font-size: 18px;
+
+	}
+
 }
 
 a {
@@ -103,6 +109,13 @@ li {
 
 	@media $smWidth {
 
+		font-size: 36px;
+
+	}
+
+	@media $xsWidth {
+
+		font-size: 32px;
 
 	}
 
@@ -123,8 +136,16 @@ li {
 
 	@media $smWidth {
 
+		font-size: 32px;
 
 	}
+
+	@media $xsWidth {
+
+		font-size: 28px;
+
+	}
+
 }
 
 .h3 {
@@ -139,6 +160,12 @@ li {
 
 	}
 
+	@media $xsWidth {
+
+		font-size: 22px;
+
+	}
+
 }
 
 .h4 {
@@ -150,6 +177,12 @@ li {
 	@media $mdWidth {
 
 		font-size: 20px;
+
+	}
+
+	@media $xsWidth {
+
+		font-size: 18px;
 
 	}
 
@@ -199,6 +232,20 @@ li {
 	justify-content: center;
 	gap: var(--margin);
 	position: relative;
+
+	@media $smWidth {
+
+		flex-direction: column;
+		gap: var(--indent);
+
+		svg {
+
+			width: 25px;
+			height: 25px;
+
+		}
+
+	}
 
 }
 

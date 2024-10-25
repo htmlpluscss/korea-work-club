@@ -11,6 +11,12 @@
 		position: relative;
 		gap: var(--gap);
 
+		@media $smWidth {
+
+			display: block;
+
+		}
+
 	}
 
 	&__content {
@@ -61,6 +67,13 @@
 
 		}
 
+		@media $smWidth {
+
+			width: 100%;
+			margin-top: var(--margin);
+
+		}
+
 	}
 
 	&__bg {
@@ -81,6 +94,12 @@
 				height: 69px;
 
 			}
+
+		}
+
+		@media $smWidth {
+
+			left: -24px;
 
 		}
 

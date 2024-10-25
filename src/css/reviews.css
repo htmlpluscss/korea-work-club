@@ -48,6 +48,12 @@
 
 			}
 
+			@media $smWidth {
+
+				width: 72px;
+
+			}
+
 		}
 
 		&-full {
@@ -126,6 +132,16 @@
 
 		}
 
+		@media $smWidth {
+
+			li {
+
+				width: calc( ( 100% - var(--indent) ) / 2 );
+
+			}
+
+		}
+
 	}
 
 	&__list {
@@ -141,10 +157,29 @@
 
 		}
 
+		@media $smWidth {
+
+			gap: var(--indent);
+
+		}
+
 		li {
 
 			width: 270px;
 			height: 480px;
+
+			@media $smWidth {
+
+				width: calc( ( 100% - var(--indent) ) / 2 );
+				height: 100vw;
+
+			}
+
+			@media $xsWidth {
+
+				width: 100%;
+
+			}
 
 			iframe {
 
@@ -194,6 +229,14 @@
 
 			}
 
+			@media $smWidth {
+
+				width: 100%;
+				font-size: 18px;
+				padding-left: 48px;
+
+			}
+
 			svg {
 
 				position: absolute;
@@ -206,6 +249,13 @@
 					left: 0;
 					width: 45px;
 					height: 45px;
+
+				}
+
+				@media $smWidth {
+
+					width: 36px;
+					height: 36px;
 
 				}
 

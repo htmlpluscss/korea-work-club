@@ -5,6 +5,12 @@
 	z-index: 1;
 	background-image: linear-gradient(to top right, #61e4df, #fff0e1);
 
+	@media $smWidth {
+
+		padding: 96px 0 24px;
+
+	}
+
 	&__content {
 
 		max-width: 800px;
@@ -24,6 +30,12 @@
 	&__title {
 
 		margin: var(--margin) 0;
+
+		@media $smWidth {
+
+			backdrop-filter: blur(2px);
+
+		}
 
 		small {
 
@@ -48,11 +60,27 @@
 		font-weight: 500;
 		backdrop-filter: blur(2px);
 
+		@media $smWidth {
+
+			margin: var(--space) 0;
+
+		}
+
 	}
 
 	.btns-bottom {
 
 		justify-content: flex-start;
+
+		@media $smWidth {
+
+			.btn--outline {
+
+				--brown: #fff;
+
+			}
+
+		}
 
 	}
 
@@ -61,6 +89,13 @@
 		font-size: 20px;
 		backdrop-filter: blur(2px);
 		margin: 10px 0;
+
+		@media $smWidth {
+
+			font-size: 18px;
+			backdrop-filter: blur(5px);
+
+		}
 
 	}
 
@@ -84,6 +119,12 @@
 
 		}
 
+		@media $smWidth {
+
+			left: 0;
+
+		}
+
 	}
 
 	&__bg {
@@ -104,6 +145,12 @@
 				height: auto;
 				left: -36px;
 				object-fit: contain;
+
+			}
+
+			@media $smWidth {
+
+				width: 72px;
 
 			}
 

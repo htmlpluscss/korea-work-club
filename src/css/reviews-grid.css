@@ -33,6 +33,35 @@
 		gap: 48px 24px;
 		grid-template-columns: repeat(6, 1fr);
 
+		@media $smWidth {
+
+			gap: var(--indent);
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+	        li {
+
+				height: 100vw;
+				width: calc( ( 100% - var(--indent) ) / 2 );
+
+				&:nth-child(n+7) {
+
+					height: 100vw;
+					width: calc( ( 100% - var(--indent) ) / 2 );
+
+				}
+
+	        }
+
+		}
+
+		@media $xsWidth {
+
+			width: 100%;
+
+		}
+
         li {
 
 			grid-column: span 3;
