@@ -6,22 +6,28 @@
 
 	&__bg {
 
-		&-full {
+		position: relative;
+		height: 0;
+		pointer-events: none;
+
+		img {
 
 			position: absolute;
 			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			opacity: 0.5;
-			pointer-events: none;
-			display: flex;
-			align-items: flex-start;
+			left: -72px;
 
-			img {
+			@media $mdWidth {
 
-				width: 100%;
+				width: 128px;
 				height: auto;
+				left: -36px;
+				object-fit: contain;
+
+			}
+
+			@media $smWidth {
+
+				width: 72px;
 
 			}
 

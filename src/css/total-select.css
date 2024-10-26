@@ -83,6 +83,7 @@
 
 			border-radius: 20px;
 			overflow: hidden;
+			padding-bottom: 20px;
 			box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 8px 22px rgba(0,0,0,0.1);
 
 		}
@@ -123,6 +124,12 @@
 				left: auto;
 				right: 20px;
 				gap: 8px;
+
+			}
+
+			@media $smWidth {
+
+				margin-top: -26px;
 
 			}
 

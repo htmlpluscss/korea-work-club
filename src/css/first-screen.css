@@ -123,34 +123,16 @@
 
 			left: 0;
 
-		}
+			&::after {
 
-	}
-
-	&__bg {
-
-		position: relative;
-		height: 0;
-		pointer-events: none;
-
-		img {
-
-			position: absolute;
-			top: 0;
-			left: -72px;
-
-			@media $mdWidth {
-
-				width: 128px;
-				height: auto;
-				left: -36px;
-				object-fit: contain;
-
-			}
-
-			@media $smWidth {
-
-				width: 72px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				background-color: var(--bg);
+				opacity: .4;
 
 			}
 
