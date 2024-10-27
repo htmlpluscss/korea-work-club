@@ -1,66 +1,39 @@
-( elems => {
+( youtube => {
 
-	let fastLoadTimeout = true;
+	if( youtube.length ) {
 
-	const init = () => {
+		const modalBox = document.querySelector('#modal-video');
 
-		clearTimeout(fastLoadTimeout);
+		[...youtube].forEach( el => {
 
-		fastLoadTimeout = null;
+			const id = el.getAttribute('data-youtube');
 
-		[...elems].forEach( el => {
+			el.addEventListener('click', event => {
 
-			const iframe = document.createElement('iframe');
+				event.preventDefault();
 
-			iframe.setAttribute('disablePictureInPicture','true');
-			iframe.setAttribute('allowfullscreen','allowfullscreen');
-			iframe.src = 'https://www.youtube.com/embed/' + el.getAttribute('data-youtube') + '?autoplay=0&loop=0&rel=0&modestbranding=1';
+				const iframe = document.createElement('iframe');
 
-			el.append(iframe);
+				iframe.setAttribute('allowfullscreen', '');
+				iframe.setAttribute('allow', 'autoplay');
+				iframe.setAttribute('src', 'https://www.youtube.com/embed/' + id + '?rel=0&showinfo=0&autoplay=1');
+
+				modalBox.append(iframe);
+
+				const eventModalShow = new CustomEvent("modalShow", {
+					detail: {
+						selector: "video"
+					}
+				});
+
+				modalBox.classList.toggle('is-shorts', el.querySelector('a').href.includes('shorts'))
+
+				window.modal.dispatchEvent(eventModalShow);
+
+			});
 
 		});
 
 	}
-
-	const appendFrame = () => {
-
-		if ( fastLoadTimeout ) {
-
-			init();
-
-		}
-
-		window.removeEventListener('scroll',appendFrame);
-		window.removeEventListener('click',appendFrame);
-
-	}
-
-	const observer = new IntersectionObserver((entries, observer) => {
-
-		const isIntersecting = [...entries].some( entry => {
-
-			observer.unobserve(entry.target);
-
-			return entry.isIntersecting;
-
-		});
-
-		if ( isIntersecting ) {
-
-			appendFrame();
-
-		}
-		else if ( fastLoadTimeout ) {
-
-			fastLoadTimeout = setTimeout( appendFrame, 30000 );
-
-		}
-
-	});
-
-	[...elems].forEach( el => observer.observe(el) );
-
-	window.addEventListener('scroll',appendFrame);
-	window.addEventListener('click',appendFrame);
 
 })(document.querySelectorAll('[data-youtube]'));
