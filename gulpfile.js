@@ -78,8 +78,13 @@ const htmlBuild = () => {
 			},
 			path: 'src/'
 		}))
-		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
-		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
+//		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
+//		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
+		.pipe(replace('<link href="/css/styles.css" rel="preload" as="style">', ''))
+		.pipe(replace('<link href="/js/scripts.js" rel="preload" as="script">', ''))
+		.pipe(replace('<script defer src="/js/scripts.js"></script>', ''))
+		.pipe(replace('<link href="/css/styles.css" rel="stylesheet">', '<style>' + fs.readFileSync('build/css/styles.min.css', 'utf8') + '</style>'))
+		.pipe(replace('</body>', '<script>' + fs.readFileSync('build/js/scripts.min.js', 'utf8') + '</script></body>'))
 		.pipe(gulp.dest('build'));
 
 };
@@ -182,10 +187,7 @@ gulp.task('watch', () => {
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 });
 
-gulp.task('build', gulp.series(
-	'clear',
-	gulp.parallel('copy','html:build','css','js')
-	));
+gulp.task('build', gulp.series('clear','copy','css','js','html:build'));
 
 gulp.task('min', () => {
 
