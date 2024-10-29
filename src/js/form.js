@@ -11,18 +11,19 @@
 			const formData = new FormData(form),
 				  formDataJSON = {};
 
-			formData.forEach( (value, key) => formDataJSON[key] = value );
+//			formData.forEach( (value, key) => formDataJSON[key] = value );
 
 			btnSubmit.disabled = true;
 
 			fetch(form.getAttribute('action'), {
 				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(formDataJSON)
+				body: formData
+//				headers: {
+//					'Content-Type': 'application/json'
+//				},
+//				body: JSON.stringify(formDataJSON)
 			})
-			.then(response => response.json())
+//			.then(response => response.json())
 			.then(result => {
 
 				console.log(result);
